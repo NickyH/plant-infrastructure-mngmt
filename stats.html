@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Plant Infrastructure Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="../Content/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../Content/css/bootstrap-select.css" rel="stylesheet" type="text/css">
+    <link href="../Content/less/datepicker.less" rel="stylesheet">
+    <link href="../Content/css/jquery-ui.custom.css" rel="stylesheet" type="text/css">
+    <link href="../Content/css/jquery.qtip.min.css" rel="stylesheet" type="text/css">
+    <link href="../Content/css/jquery.slidepanel.css" rel="stylesheet" type="text/css">
+    <link href="../Content/css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../Morris/morris.css" rel="stylesheet">
+    <link href="../Content/less/override.less" rel="stylesheet" type="text/less">
+  </head>
+  <body>
+
+    <!-- page start -->
+    <div id="map-page">
+
+      <!-- top bar -->
+      <div class="top-bar">
+        <div class="asset-headers type">Bitumen Tank</div>
+        <div class="asset-headers site">Archerfield</div>
+        <div class="asset-headers state">QLD</div>
+        <div class="asset-headers contact">Simon Moroney</div>
+        <div class="asset-headers phone">07 3255 6710</div>
+      </div>
+
+      <!-- main content area on form page -->
+      <div class="stats-container">
+
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-8">
+              <div class="chart menu-orange">
+                <div id="totalbudgetvariance"></div>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="chart-side">
+                <span>Bitumen Tank Efficiency: Bitumen Tank Efficiency</span>
+                <div class="donut-small" id="pie-totalbudgetvariance"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-8">
+              <div class="chart menu-green">
+                <div id="labourbudgetvariance"></div>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="chart-side">
+                <span>Bitumen Tank Costs: Bitumen Tank Costs</span>
+                <div class="donut-small" id="pie-labourbudgetvariance"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- end main content-->
+
+      <!-- left bar pane map -->
+      <div class="left-bar">
+        <div class="icon"><a href="index.html"><img src="../Content/images/icon-globe-white.png"></a></div>
+      </div>
+
+      <!-- bottom bar-->
+      <div id="insert-bottom">
+      </div>
+
+    </div>
+    <!-- page end -->
+
+
+    <div id="plant" class="hidden">
+      <a href="#"><img class="whole-plant" src="../Content/images/plant-process.jpg"></a>
+    </div>
+
+    <script src="../Scripts/js/jquery-1.10.2.min.js"></script>
+    <script src="../Scripts/js/bootstrap.min.js"></script>
+    <script src="../Scripts/js/less.js" type="text/javascript"></script>
+    <script src="../Scripts/js/bootstrap-select.js"></script>
+    <script src="../Scripts/js/bootstrap-datepicker.js"></script>
+    <script src="../Scripts/js/jquery-ui.custom.js"></script>
+    <script src="../Scripts/js/jquery.qtip.min.js"></script>
+    <script src="../Scripts/js/timepicker.js"></script>
+    <script src="../Scripts/js/raphael.js"></script>
+    <script src="../Morris/morris.min.js"></script>
+    <script src="../Scripts/js/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="../Scripts/js/jquery-jvectormap-au-mill-en.js"></script>
+    <script src="../Scripts/js/jquery.slidepanel.js"></script>
+    <script src="../Scripts/js/override.js"></script>
+
+    <script>
+      insert_left();
+      insert_top();
+    </script>
+
+    <script>
+  new Morris.Line({
+    element: 'totalbudgetvariance',
+    data: [
+    {month: '2013-11', value: 10 },
+    {month: '2013-12', value: 12 },
+    {month: '2014-01', value: 5 },
+    {month: '2014-02', value: 22 },
+    {month: '2014-03', value: 28 }
+    ],
+    goals: [45],
+    goalLineColors: ['green'],
+    xkey: 'month',
+    ykeys: ['value'],
+    labels: ['Value']
+  });
+
+  new Morris.Donut({
+    element: 'pie-totalbudgetvariance',
+    data: [
+    {label: 'Nov \'13', value: 10 },
+    {label: 'Dec \'14', value: 12 },
+    {label: 'Jan \'14', value: 23 },
+    {label: 'Feb \'14', value: 28 }
+    ],
+    colors: ['#6914e0', '#bcef73', '#14c8db', '#b713ce']
+  });
+
+  new Morris.Line({
+    element: 'labourbudgetvariance',
+    data: [
+    {month: '2013-11', value: 12 },
+    {month: '2013-12', value: 15 },
+    {month: '2014-01', value: 20 },
+    {month: '2014-02', value: 14 },
+    {month: '2014-03', value: 10 }
+    ],
+    goals: [45],
+    goalLineColors: ['green'],
+    xkey: 'month',
+    ykeys: ['value'],
+    labels: ['Value']
+  });
+
+  new Morris.Donut({
+    element: 'pie-labourbudgetvariance',
+    data: [
+    {label: 'Nov \'13', value: 15 },
+    {label: 'Dec \'14', value: 10 },
+    {label: 'Jan \'14', value: 19 },
+    {label: 'Feb \'14', value: 2 }
+    ],
+    colors: ['#6914e0', '#bcef73', '#14c8db', '#b713ce']
+  });
+  </script>
+
+
+
+  </body>
+</html>

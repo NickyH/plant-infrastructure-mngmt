@@ -1,0 +1,520 @@
+@import "globals.less";
+
+
+body {
+  font-family: @font-family-main;
+  background-color: @background-main;
+}
+
+.map-container {
+  position: fixed;
+  top: 50px;
+  left: 200px;
+  width: 100%;
+  height: 100%;
+}
+
+#map-canvas {
+  display: block;
+  height: 100%;
+  width: 100%;
+  .hidden {
+    display: none;
+  }
+}
+
+#fake-map {
+  display: block;
+  height: 95%;
+  width: 95%;
+  .hidden {
+    display: none;
+  }
+}
+
+td {
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.header-container {
+  margin-top: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+.donut-small {
+  height: 200px;
+}
+
+.icon-link {
+  width: 80px;
+  display: inline-block;
+  position: relative;
+  float: right;
+  margin-top: 20px;
+  margin-right: 10px;
+  img {
+    width: 80px;
+    opacity: 0.8;
+  }
+}
+
+//left bar
+.left-bar {
+  width: @left-bar-width;
+  background : @left-bar-colour;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 4;
+  border-right: 1px solid darken(@left-bar-colour, 20%);
+  .powered {
+    position: absolute;
+    bottom: 15px;
+    padding: 0 10px 0 10px;
+    span {
+      color: @white;
+      font-size: 11px;
+      display: block;
+    }
+    span:nth-child(1) {
+      font-weight: bold;
+      font-size: 13px;
+    }
+  }
+  .icon {
+    margin-top: 50px;
+    width: 50px;
+    height: 50px;
+    margin-left: 50px;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: @form-highlight-colour;
+    img {
+      width: 50px;
+    }
+    a:hover {
+      img {
+        width: 50px;
+        background-color: darken(@form-highlight-colour, 10%);
+      }
+    }
+  }
+}
+
+
+//filter list
+
+.filter-list {
+  width: 90%;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li.active {
+  a.pill-select {
+    &.inactive {
+      background-color: @white-medium;
+      color: black;
+      border: 1px solid @grey-medium;
+      height: 35px;
+      line-height: 15px;
+    }
+  }
+}
+
+.nav-stacked {
+  margin-bottom: 15px;
+  height: 30px;
+  font-size: 12px;
+}
+
+// map
+
+#insert-map {
+  position: fixed;
+  left: 200px;
+  top: 80px;
+  width: auto;
+  height: auto;
+}
+
+.ozmap {
+  margin-left: 150px;
+  margin-top: 30px;
+  width: 700px;
+}
+
+//top bar
+
+.top-bar {
+  background : @grey-medium;
+  width: 100%;
+  height: @top-bar-height;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  border-bottom: 1px solid darken(@grey-medium, 10%);
+}
+
+//bottom bar
+
+.bottom-bar {
+  background : @grey-light;
+  height: @bottom-bar-height;
+  padding: 0;
+  margin: 0;
+  z-index: 3;
+  .form-horizontal.container {
+    margin-left: 0px;
+  }
+}
+
+// tables
+
+.text-in-tab {
+  position: relative;
+  margin-top: 7px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+  font-family: 'arial', san-serif;
+}
+
+.table-tab {
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  left: 35%;
+  width: fit-content;
+  white-space: nowrap;
+  height: 40px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  background-color: darken(@form-panel-colour, 10%);
+  border: 1px solid @form-highlight-colour;
+  margin: 0;
+  padding-top: 0;
+  padding-left: 2%;
+  padding-right: 4%;
+  z-index: 2;
+}
+
+#table-filter-1 {
+  width: 100%;
+  height: 100%;
+}
+
+#table-filter-2 {
+  width: 400px;
+}
+
+#nation-search,
+#document-search {
+  width: 300px;
+}
+
+.row.asset-table {
+  min-width: 1200px;
+  height: 100%;
+  margin-left: 20px;
+  position: relative;
+  overflow-x: scroll;
+}
+
+//qtip general
+
+.qtip {
+  max-width: 1200px !important;
+  min-width: 50px !important;
+}
+
+.qtip-close {
+  width: 30px !important;
+  height: 30px !important;
+  right: 5px !important;
+  top: 5px !important;
+  border-style: none !important;
+  background-image:url('../images/close-button.png') !important;
+  background-repeat:no-repeat;
+  background-size: contain !important;
+}
+
+//bootstrap-select overrides
+.btn-group.bootstrap-select {
+  margin-bottom: 0;
+}
+
+.bootstrap-select.btn-group > .disabled {
+  background-color: #eee !important;
+}
+
+// field required disabled
+input[disabled],
+select[disabled],
+textarea[disabled],
+button[disabled] {
+  color: lighten(@black, 50%);
+}
+
+//plant
+
+.qtip {
+  &.qtip-plant {
+    .qtip-content {
+      width: 900px !important;
+      height: 430px !important;
+    }
+  }
+}
+
+.whole-plant {
+  width: 880px;
+  margin-left: 10px;
+  margin-top: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-wrapper {
+  margin-left: 200px;
+  margin-top: 50px;
+  width: fit-content;
+}
+
+.plant-page-content {
+  width: 100%;
+}
+
+.info-box {
+  border-left: 1px solid @grey-light;
+  border-bottom: 1px solid @grey-light;
+  height: fit-content;
+}
+
+.info-content {
+  margin: 15px;
+  // background-color: @grey-light;
+  // border-radius: 5px;
+  // border: none;
+}
+
+//slidepanel
+
+.asset-table {
+  width: fit-content;
+}
+
+.cb_slide_panel {
+  background: @grey-light !important;
+  &.panel-bottom {
+    .wrapper {
+    }
+  }
+}
+
+a#slidepanel-link {
+  position: fixed;
+  bottom: 0;
+  left: 40%;
+  height: 40px;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: fit-content;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top: 1px solid @form-highlight-colour;
+  border-left: 1px solid @form-highlight-colour;
+  border-right: 1px solid @form-highlight-colour;
+  background-color: @grey-light;
+  box-shadow: 3px 3px 3px 3px grey;
+  text-decoration: none;
+  span {
+    color: @grey-dark;
+    font-weight: bold;
+  }
+}
+
+//assets
+
+.asset-headers {
+  font-size: 24px;
+  position: fixed;
+  top: 10px;
+  color: black;
+  display: inline-block;
+  &.type {
+    left: 220px;
+    color: @form-highlight-colour;
+  }
+  &.site {
+    left: 450px;
+    font-style: italic;
+  }
+  &.state {
+    left: 600px;
+    font-style: italic;
+  }
+  &.contact {
+    right: 150px;
+    font-size: 13px;
+  }
+  &.phone {
+    right: 50px;
+    font-size: 13px;
+  }
+}
+
+.plant-headers {
+  font-size: 24px;
+  position: fixed;
+  top: 10px;
+  color: black;
+  display: inline-block;
+  &.site {
+    left: 220px;
+    color: @form-highlight-colour;
+  }
+  &.type {
+    left: 400px;
+    font-style: italic;
+  }
+  &.state {
+    left: 600px;
+    font-style: italic;
+  }
+  &.contact {
+    right: 150px;
+    font-size: 13px;
+  }
+  &.phone {
+    right: 50px;
+    font-size: 13px;
+  }
+}
+
+
+.asset-image {
+  img {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 5px;
+  }
+}
+
+.process-image {
+  img {
+    width: 177px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 5px;
+  }
+}
+
+.attachment {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.details-panel {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  min-height: 100px;
+  border-radius: 5px;
+  background-color: @grey-light;
+  border: 1px solid @form-highlight-colour;
+  padding: 10px;
+  input {
+    border-radius: 5px;
+    background-color: @grey-light;
+    color: @grey-dark;
+  }
+}
+
+//stats
+
+.stats-container {
+  margin-left: 200px;
+  margin-top: 60px;
+}
+
+.chart {
+  margin-left: 10px;
+  position: relative;
+  float: left;
+  margin-bottom: 50px;
+  width: 95%;
+  height: auto;
+  border: 1px solid @white-medium;
+  border-radius: 10px;
+  background-color: @white-light;
+  box-shadow: 1px 1px 1px grey;
+  &.menu-green {
+    border-left: 100px solid @menu-green;
+  }
+  &.menu-orange {
+    border-left: 100px solid @menu-orange;
+  }
+  &.menu-red {
+    border-left: 100px solid @menu-red;
+  }
+}
+
+.chart-side {
+  width: 100%;
+  min-height: 200px;
+  max-height: 500px;
+  overflow: hidden;
+  border: 1px solid @white-medium;
+  border-radius: 10px;
+  background-color: @white-light;
+  box-shadow: 1px 1px 1px grey;
+  padding: 20px;
+}
+
+.donut-small {
+  height: 200px;
+}
+
+// file upload attachment styling
+input[type="file"] {
+  position: relative;
+  opacity: 0;
+  z-index: 2;
+}
+
+.file-select {
+  width: auto;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.btn.attachment {
+  height: 30px;
+  float: right;
+  font-weight: bold;
+}
