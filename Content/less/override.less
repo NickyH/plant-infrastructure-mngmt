@@ -262,7 +262,9 @@ li.active {
   &.tab-panel {
     min-height: 50px;
     padding: 20px;
-    margin: 10px auto 10px 30px;
+    margin: 0 auto 10px 30px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 }
 
@@ -303,6 +305,16 @@ li.active {
   cursor: default;
   background-color: @form-highlight-colour;
   border: 1px solid #dddddd;
+}
+
+.nav-tabs {
+  &.nav-justified {
+    &.compliance-tabs {
+      width: 95%;
+      margin-left: 30px;
+      margin-right: auto;
+    }
+  }
 }
 
 // table styling
@@ -521,12 +533,14 @@ a#slidepanel-link {
   &.type {
     left: 220px;
     color: @form-highlight-colour;
-    font-size: 18px;
-    top: 15px;
+    font-size: 24px;
+    top: 10px;
   }
   &.site {
     left: 450px;
     font-style: italic;
+    font-size: 18px;
+    top: 15px;
   }
   &.state {
     left: 600px;
@@ -622,6 +636,10 @@ a#slidepanel-link {
   }
 }
 
+input {
+  border-radius: 4px;
+}
+
 //stats
 
 .stats-container {
@@ -677,6 +695,66 @@ input[type="file"] {
 .file-select {
   width: auto;
   height: 30px;
+
+//bootstrap general overrides
+.input-group-addon {
+  // min-width:50px;
+  text-align:right;
+  &.layers {
+    min-width: 30px;
+  }
+}
+
+.form-control {
+  float: right;
+}
+
+.form-control[readonly] {
+  background-color: white;
+  cursor: text;
+}
+
+.picker__holder {
+  th {
+    text-align: center;
+  }
+}
+
+.search {
+  width: 50%;
+  float: left;
+}
+
+// webkit overrides
+input[type="date"] {
+  -webkit-appearance: none;
+}
+
+//bootstrap-select overrides
+.btn-group.bootstrap-select {
+  margin-bottom: 0;
+}
+
+.bootstrap-select.btn-group > .disabled {
+  background-color: #eee !important;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.item {
+  .input-group-addon, .input-group-btn, .input-group, .form-control {
+  display: inline-block;
+  }
+  input[type="checkbox"] {
+  margin-left: 10px;
+  }
+}
   position: absolute;
   top: 0;
   left: 0;
@@ -690,4 +768,32 @@ input[type="file"] {
   height: 30px;
   float: right;
   font-weight: bold;
+}
+
+
+//form validation with parsely js
+input[data-required="true"] {
+  background-color: @form-background-required !important;
+  border: 1px solid @form-border-required !important;
+}
+
+select[data-required="true"] {
+  background-color: @form-background-required !important;
+  border: 1px solid @form-border-required !important;
+  button {
+    background-color: @form-background-required !important;
+    border: 1px solid @form-border-required !important;
+  }
+}
+
+textarea[data-required="true"] {
+  background-color: @form-background-required !important;
+  border: 1px solid @form-border-required !important;
+}
+
+select[data-required="true"] ~ .btn-group.bootstrap-select.show-tick.form-control {
+  button{
+    background-color: @form-background-required !important;
+    border: 1px solid @form-border-required !important;
+  }
 }

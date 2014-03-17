@@ -9,6 +9,28 @@ $(function(){
     })
 });
 
+function toggle_tab_compliance() {
+  $('ul.nav-tabs.compliance-tabs li.active').removeClass('active');
+  $(this).parent('li').addClass('active');
+
+  var tab_name = $(this).attr('id');
+  if (tab_name === 'tab-epa') {
+    $('#form-epa').removeClass('hidden');
+    $('#form-permits').addClass('hidden');
+    $('#form-dg').addClass('hidden');
+  }
+  if (tab_name === 'tab-permits') {
+    $('#form-epa').addClass('hidden');
+    $('#form-permits').removeClass('hidden');
+    $('#form-dg').addClass('hidden');
+  }
+  if (tab_name === 'tab-dg') {
+    $('#form-epa').addClass('hidden');
+    $('#form-permits').addClass('hidden');
+    $('#form-dg').removeClass('hidden');
+  }
+}
+
 function toggle_rw_select() {
   event.preventDefault();
   $(this).toggleClass('inactive');
