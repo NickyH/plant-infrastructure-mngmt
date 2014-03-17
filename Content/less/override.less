@@ -89,19 +89,20 @@ td {
   }
   .icon {
     margin-top: 50px;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     margin-left: 50px;
     margin-right: auto;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: @form-highlight-colour;
     img {
-      width: 50px;
+      width: 80px;
     }
     a:hover {
       img {
-        width: 50px;
+        width: 80px;
         background-color: darken(@form-highlight-colour, 10%);
+        border-radius: 8px;
       }
     }
   }
@@ -154,7 +155,7 @@ li.active {
 //top bar
 
 .top-bar {
-  background : @grey-medium;
+  background : @top-bar-colour;
   width: 100%;
   height: @top-bar-height;
   padding: 0;
@@ -229,6 +230,170 @@ li.active {
   position: relative;
   overflow-x: scroll;
 }
+
+
+.form-panel
+{
+  background-color: @form-panel-colour;
+  border: @form-panel-border;
+  border-radius: @form-panel-border-radius;
+  -webkit-border-radius: 12px;
+  box-shadow: 5px 5px 2px 2px @form-panel-outer-shadow;
+  -webkit-box-shadow: 5px 5px 2px 2px @form-panel-outer-shadow;
+  margin: 30px auto 40px 30px;
+  display: inline-block;
+  width: 90% !important;
+  min-height: 250px;
+  padding: 30px 5px 20px 5px;
+  float: left;
+  &.full-width {
+    @media @widthMediumLarge {
+      width: 90% !important;
+    }
+    @media @widthLarge {
+      width: 95% !important;
+    }
+  }
+  &.title-panel {
+    min-height: 50px;
+    padding: 15px;
+    margin: 15px auto 5px 30px;
+  }
+  &.tab-panel {
+    min-height: 50px;
+    padding: 20px;
+    margin: 10px auto 10px 30px;
+  }
+}
+
+.compliance-container {
+  position: absolute;
+  left: 200px;
+  top: 80px;
+}
+
+// tab styling
+
+.nav-tabs {
+  li {
+    a {
+      background-color: lighten(@form-highlight-colour, 32%);
+      border-bottom-color: @white !important;
+      color: @black;
+      box-shadow: -1px -1px 1px @grey-dark;
+      border-radius: 8px 8px 0 0;
+    }
+    &.active {
+      a {
+      background-color: @form-highlight-colour;
+      border-bottom-color: @white !important;
+      color: @black;
+      font-weight: bold;
+      box-shadow: -1px -1px 1px @grey-dark;
+      border-radius: 8px 8px 0 0;
+      }
+    }
+  }
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #555555;
+  cursor: default;
+  background-color: @form-highlight-colour;
+  border: 1px solid #dddddd;
+}
+
+// table styling
+
+.activity-data-table {
+  .form-control {
+    height: 28px !important;
+    margin-top: 5px;
+  }
+  .text {
+    margin-top: 10px;
+  }
+  tr{
+    height: 35px;
+  }
+}
+
+.table-header {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: @grey-dark;
+  color: @white;
+  font-size: 16px;
+  text-indent: 50px;
+  border-bottom: 1px solid @form-highlight-colour;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  span {
+    line-height: 30px;
+    margin-bottom: 20px;
+    height: 20px;
+    font-weight: bold;
+  }
+  .activity-table-search {
+    width: auto;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    input {
+      height: 26px;
+      margin-top: 12px;
+      border-radius: 13px;
+      line-height: 10px;
+      text-indent: 10px;
+      width: 400px;
+      box-shadow: inset 3px 3px 2px @grey-medium;
+      font-size: 12px;
+      color: @grey-dark;
+      background-color: @grey-light;
+    }
+    button {
+      border-color: transparent;
+      position: absolute;
+      right: 20px;
+      top: 9px;
+      width: 5px;
+      height: 5px;
+      background-color: transparent;
+      color: @grey-medium-dark;
+    }
+  }
+}
+
+// table column widths
+.tbl-edit {
+  width: 2%;
+}
+.tbl-activity {
+  width: 20%;
+}
+.tbl-invoice {
+  width: 15%;
+}
+.tbl-estimate {
+  width: 10%;
+}
+.tbl-measure {
+  width: 10%;
+}
+.tbl-unit {
+  width: 2%;
+}
+.tbl-total {
+  width: 3%;
+}
+.tbl-comments {
+  // width:20%;
+}
+
 
 //qtip general
 
@@ -356,6 +521,8 @@ a#slidepanel-link {
   &.type {
     left: 220px;
     color: @form-highlight-colour;
+    font-size: 18px;
+    top: 15px;
   }
   &.site {
     left: 450px;
@@ -364,6 +531,8 @@ a#slidepanel-link {
   &.state {
     left: 600px;
     font-style: italic;
+    font-size: 18px;
+    top: 15px;
   }
   &.contact {
     right: 150px;
@@ -383,15 +552,19 @@ a#slidepanel-link {
   display: inline-block;
   &.site {
     left: 220px;
-    color: @form-highlight-colour;
+    color: darken(@form-highlight-colour, 20%);
   }
   &.type {
     left: 400px;
     font-style: italic;
+    font-size: 18px;
+    top: 15px;
   }
   &.state {
     left: 600px;
     font-style: italic;
+    font-size: 18px;
+    top: 15px;
   }
   &.contact {
     right: 150px;
