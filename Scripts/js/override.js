@@ -11,9 +11,31 @@ $(function(){
 });
 
 function open_notify_dialog() {
-  bootbox.confirm('This will permanently close off this issue', function (response) {
+  // bootbox.alert('Burner fuel consumption below theoretical minimum.');
 
-  });
+  bootbox.dialog({
+  message: "Burner fuel consumption below theoretical minimum",
+  title: "Drum Burner Alert",
+  closeButton: false,
+  className: "compliance-alert-bootbox",
+  buttons: {
+    success: {
+      label: "View Report",
+      className: "btn-success",
+      callback: goto_compliance_epa
+    },
+    "Close": {
+      className: "btn-info",
+      callback: function() {}
+    }
+  }
+});
+
+
+}
+
+function goto_compliance_epa () {
+  window.location = 'compliance.html';
 }
 
 function toggle_tab_compliance() {

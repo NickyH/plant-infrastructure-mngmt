@@ -20,11 +20,8 @@
 
       <!-- top bar -->
       <div class="top-bar">
-        <div class="plant-headers site">Archerfield</div>
-        <div class="plant-headers type">Asphalt Plant</div>
-        <div class="plant-headers state">QLD</div>
-        <!-- <div class="plant-headers contact">Simon Moroney</div> -->
-        <!-- <div class="plant-headers phone">07 3255 6710</div> -->
+        <div class="asset-headers type">Bitumen Tank</div>
+        <div class="asset-headers site">150 Boniface Street Archerfield, QLD</div>
       </div>
 
       <!-- forms content container -->
@@ -208,8 +205,61 @@
                     <div id="form-permits" class="tab-panel hidden">
 
                       <div class="form-group">
-                        <label class="col-sm-4 control-label">Note History</label>
-                        <div class="col-sm-8">
+                        <div class="col-sm-12">
+                          <!-- each searchable table needs unique ID "table-filter-*" -->
+                          <table id="table-filter-epa-docs" class="table table-condensed table-striped contact-history-table">
+                            <thead>
+                              <tr>
+                                <th class="tbl-date">Document</th>
+                                <th class="tbl-request">Date Added</th>
+                                <th class="tbl-request">Date To Be Renewed</th>
+                                <th class="tbl-edit">Edit</th>
+                              </tr>
+                            </thead>
+
+                            <tr>
+                              <td><div class="text"><a href="QPLTW Archerfield Trade Waste 2014 10 12.pdf" target="_blank">QPLTW Archerfield Trade Waste</a></div></td>
+                              <td><div class="text">12/10/2013</div></td>
+                              <td><div class="text">12/10/2014</div></td>
+                              <td>
+                                <div class="text">
+                                  <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td><div class="text"><a href="QPLDG Archerfield 2011 07 16.pdf" target="_blank">QPLDG Archerfield</a></div></td>
+                              <td><div class="text">16/07/2011</div></td>
+                              <td><div class="text">16/07/2016</div></td>
+                              <td>
+                                <div class="text">
+                                  <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                                </div>
+                              </td>
+                            </tr>
+
+                          </table>
+                          <!-- category table end-->
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-sm-8"></label>
+                        <div class="col-sm-4">
+                          <input type="file" class="form-control">
+                          <span class='btn btn-info file-select'>Add Document</span>
+                        </div>
+                      </div>
+
+                    </div>
+                    <!--end permits tab-->
+
+                    <!--start dg tab-->
+                    <div id="form-dg" class="tab-panel hidden">
+
+                      <div class="form-group">
+                        <div class="col-sm-12">
                           <!-- each searchable table needs unique ID "table-filter-*" -->
                           <table id="table-filter-epa-docs" class="table table-condensed table-striped contact-history-table">
                             <thead>
@@ -248,61 +298,11 @@
                         </div>
                       </div>
 
-                    </div>
-                    <!--end permits tab-->
-
-                    <!--start dg tab-->
-                    <div id="form-dg" class="tab-panel hidden">
-
                       <div class="form-group">
-                        <label class="col-sm-4 control-label">Documents</label>
-                        <div class="col-sm-8">
-                          <!-- each searchable table needs unique ID "table-filter-*" -->
-                          <table id="table-filter-epa-docs" class="table table-condensed table-striped contact-history-table">
-                            <thead>
-                              <tr>
-                                <th class="tbl-date">Document</th>
-                                <th class="tbl-request">Date Added</th>
-                                <th class="tbl-request">Date To Be Renewed</th>
-                                <th class="tbl-edit">Edit</th>
-                              </tr>
-                            </thead>
-
-                            <tr>
-                              <td><div class="text"><a href="#">Trade Waste Permit</a></div></td>
-                              <td><div class="text">15/03/2014</div></td>
-                              <td><div class="text">15/03/2014</div></td>
-                              <td>
-                                <div class="text">
-                                  <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
-                                </div>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td><div class="text"><a href="#">Other Permit</a></div></td>
-                              <td><div class="text">15/03/2014</div></td>
-                              <td><div class="text">15/03/2014</div></td>
-                              <td>
-                                <div class="text">
-                                  <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
-                                </div>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td><div class="text"><a href="#">Other Permit</a></div></td>
-                              <td><div class="text">15/03/2014</div></td>
-                              <td><div class="text">15/03/2014</div></td>
-                              <td>
-                                <div class="text">
-                                  <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
-                                </div>
-                              </td>
-                            </tr>
-
-                          </table>
-                          <!-- category table end-->
+                        <label class="col-sm-8"></label>
+                        <div class="col-sm-4">
+                          <input type="file" class="form-control">
+                          <span class='btn btn-info file-select'>Add Document</span>
                         </div>
                       </div>
 
