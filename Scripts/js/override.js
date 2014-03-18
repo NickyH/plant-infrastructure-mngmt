@@ -7,7 +7,14 @@ $(function(){
         orientation: 'bottom',
         mode: 'push'
     })
+    $('.open-notify').on('click', open_notify_dialog);
 });
+
+function open_notify_dialog() {
+  bootbox.confirm('This will permanently close off this issue', function (response) {
+
+  });
+}
 
 function toggle_tab_compliance() {
   $('ul.nav-tabs.compliance-tabs li.active').removeClass('active');
