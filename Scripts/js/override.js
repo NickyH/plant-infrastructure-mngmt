@@ -195,3 +195,11 @@ function table_search(thisObj, tableID) {
   }).hide();
   $('thead tr').show();
 }
+
+function enable_epa_fields() {
+  $('#form-epa').children('.form-group').children().children('input.form-control').removeAttr('disabled');
+}
+
+function disable_epa_fields() {
+  $('#form-epa').children('.form-group').children().children('input.form-control').attr('disabled', 'disabled');
+}

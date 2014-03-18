@@ -695,6 +695,12 @@ input[type="file"] {
 .file-select {
   width: auto;
   height: 30px;
+// }
+
+// .button-only {
+//   width: auto;
+//   height: 33px;
+// }
 
 //bootstrap general overrides
 .input-group-addon {
@@ -801,4 +807,40 @@ select[data-required="true"] ~ .btn-group.bootstrap-select.show-tick.form-contro
 span.glyphicon-flag {
   color: red;
   cursor: pointer;
+}
+
+.tab-panel {
+
+}
+
+// form buttons
+.form-buttons {
+  width: 100%;
+  display: block;
+  float: right;
+  height: 70px;
+    .form-button {
+    float: right;
+    height: 30px;
+    min-width: 120px;
+    -webkit-border-radius: 20px;
+    box-shadow: 2px 2px 2px grey;
+    -webkit-box-shadow: 2px 2px 2px grey;
+    border: 1px solid grey;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    font: @form-button-font;
+    color: @white;
+    &.save-button {
+    background-color: @save-button-colour;
+    letter-spacing: 2px;
+    }
+    &.cancel-button {
+    background-color: @cancel-button-colour;
+    letter-spacing: 2px;
+    }
+  }
 }
