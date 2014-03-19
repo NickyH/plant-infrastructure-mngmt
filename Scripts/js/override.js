@@ -111,6 +111,28 @@ function toggle_tab_compliance() {
   }
 }
 
+function toggle_tab_site() {
+  $('ul.nav-tabs.site-tabs li.active').removeClass('active');
+  $(this).parent('li').addClass('active');
+
+  var tab_name = $(this).attr('id');
+  if (tab_name === 'tab-siteplan') {
+    $('#form-siteplan').removeClass('hidden');
+    $('#form-siteprocess').addClass('hidden');
+    $('#form-assetlist').addClass('hidden');
+  }
+  if (tab_name === 'tab-siteprocess') {
+    $('#form-siteplan').addClass('hidden');
+    $('#form-siteprocess').removeClass('hidden');
+    $('#form-assetlist').addClass('hidden');
+  }
+  if (tab_name === 'tab-assetlist') {
+    $('#form-siteplan').addClass('hidden');
+    $('#form-siteprocess').addClass('hidden');
+    $('#form-assetlist').removeClass('hidden');
+  }
+}
+
 function toggle_rw_select() {
   event.preventDefault();
   $(this).toggleClass('inactive');

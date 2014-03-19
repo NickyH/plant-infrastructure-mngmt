@@ -322,8 +322,8 @@ li.active {
 .nav-tabs {
   li {
     a {
-      background-color: lighten(@form-highlight-colour, 32%);
-      border-bottom-color: @white !important;
+      background-color: lighten(#82afd1, 20%);
+      // border-bottom-color: @white !important;
       color: @black;
       box-shadow: -1px -1px 1px @grey-dark;
       border-radius: 8px 8px 0 0;
@@ -331,8 +331,8 @@ li.active {
     &.active {
       a {
       background-color: @form-highlight-colour;
-      border-bottom-color: @white !important;
-      color: @black;
+      // border-bottom-color: @white !important;
+      color: @white;
       font-weight: bold;
       box-shadow: -1px -1px 1px @grey-dark;
       border-radius: 8px 8px 0 0;
@@ -344,15 +344,25 @@ li.active {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #555555;
+  color: @white;
   cursor: default;
-  background-color: @form-highlight-colour;
-  border: 1px solid #dddddd;
+  background-color: #82afd1;
+  border: 1px solid #82afd1;
 }
 
 .nav-tabs {
   &.nav-justified {
     &.compliance-tabs {
+      width: 95%;
+      margin-left: 30px;
+      margin-right: auto;
+    }
+  }
+}
+
+.nav-tabs {
+  &.nav-justified {
+    &.site-tabs {
       width: 95%;
       margin-left: 30px;
       margin-right: auto;
@@ -498,8 +508,7 @@ button[disabled] {
 
 .whole-plant {
   width: 880px;
-  margin-left: 10px;
-  margin-top: 70px;
+  margin-top: 30px;
   display: block;
   margin-left: auto;
   margin-right: auto;

@@ -1,351 +1,308 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Plant Infrastructure Management</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
-    <link href="../Content/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="../Content/css/bootstrap-select.css" rel="stylesheet" type="text/css">
-    <link href="../Content/less/datepicker.less" rel="stylesheet">
-    <link href="../Content/css/jquery-ui.custom.css" rel="stylesheet" type="text/css">
-    <link href="../Content/css/jquery.qtip.min.css" rel="stylesheet" type="text/css">
-    <link href="../Content/css/jquery.slidepanel.css" rel="stylesheet" type="text/css">
-    <link href="../Content/css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="../Morris/morris.css" rel="stylesheet">
-    <link href="../Content/less/override.less" rel="stylesheet" type="text/less">
-  </head>
-  <body>
+<!-- forms content container -->
+<div class="container-fluid compliance-container">
 
-    <!-- page start -->
-    <div id="map-page">
+  <div class="asset-headers type">Archerfield</div>
+  <div class="asset-headers site">150 Boniface Street, Archerfield, QLD</div>
 
-      <!-- forms content container -->
-      <div class="container-fluid compliance-container">
+  <!-- tab row -->
+  <div class="row">
+    <div class="col-12">
+      <div class="row-fluid">
 
-        <!-- tab row -->
-        <div class="row">
-          <div class="col-12">
-            <div class="row-fluid">
+        <!-- form panel 1 -->
+        <div class="col-lg-12 col-md-12 col-sm-12">
 
-              <!-- form panel 1 -->
-              <div class="col-lg-12 col-md-12 col-sm-12">
+          <ul class="nav nav-tabs nav-justified compliance-tabs">
+            <li class="active"><a href="#" id="tab-epa">EPA</a></li>
+            <li><a href="#" id="tab-permits">Permits</a></li>
+            <li><a href="#" id="tab-dg">DG</a></li>
+          </ul>
 
-                <ul class="nav nav-tabs nav-justified compliance-tabs">
-                  <li class="active"><a href="#" id="tab-epa">EPA</a></li>
-                  <li><a href="#" id="tab-permits">Permits</a></li>
-                  <li><a href="#" id="tab-dg">DG</a></li>
-                </ul>
+          <div class="form-panel full-width tab-panel">
 
-                <div class="form-panel full-width tab-panel">
+            <form class="form-horizontal container">
 
-                  <form class="form-horizontal container">
-
-                    <div class="form-buttons">
-                      <input type="submit" value="Save" class="form-button save-button" data-role="button" />
-                      <input type="submit" value="Edit" class="form-button cancel-button" data-role="button" />
-                    </div>
-
-                    <!--start EPA tab-->
-                    <div class="tab-panel" id="form-epa">
-
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">EPA Licence Number</label>
-                        <div class="col-sm-8">
-                          <input disabled class="form-control" value="4874389" />
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Works Approval Number</label>
-                        <div class="col-sm-8">
-                          <input disabled class="form-control" value="22356" />
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">EPA Contact Name</label>
-                        <div class="col-sm-8">
-                          <input disabled class="form-control" value="John Smith" />
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">EPA Contact Phone</label>
-                        <div class="col-sm-8">
-                          <input disabled class="form-control" value="02 9847381" />
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Site Contact</label>
-                        <div class="col-sm-8">
-                          <input disabled class="form-control" value="Greg Johnson" />
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">EPA Contact Phone</label>
-                        <div class="col-sm-8">
-                          <input disabled class="form-control" value="02 48284756" />
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Documents</label>
-                        <div class="col-sm-8">
-                          <!-- each searchable table needs unique ID "table-filter-*" -->
-                          <table class="table table-condensed table-striped contact-history-table">
-                            <thead>
-                              <tr>
-                                <th class="tbl-date">Document</th>
-                                <th class="tbl-request">Date Added</th>
-                                <th class="tbl-edit">Edit</th>
-                              </tr>
-                            </thead>
-
-                            <tr>
-                              <td><div class="text"><a href="#">epa-report.pdf</a></div></td>
-                              <td><div class="text">15/03/2014</div></td>
-                              <td>
-                                <div class="text">
-                                  <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
-                                </div>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td><div class="text"><a href="#">epa-costing.pdf</a></div></td>
-                              <td><div class="text">15/03/2014</div></td>
-                              <td>
-                                <div class="text">
-                                  <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
-                                </div>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td><div class="text"><a href="#">epa-facility.pdf</a></div></td>
-                              <td><div class="text">15/03/2014</div></td>
-                              <td>
-                                <div class="text">
-                                  <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
-                                </div>
-                              </td>
-                            </tr>
-
-                          </table>
-                          <!-- category table end-->
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Add Document</label>
-                        <div class="col-sm-8">
-                          <input type="file" class="form-control">
-                          <span class='btn btn-info file-select'>Select File</span>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Notes</label>
-                        <div class="col-sm-8">
-                          <textarea class="form-control" rows="4"></textarea>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label"></label>
-                        <label class="col-sm-4 control-label"></label>
-                        <div class="col-sm-4">
-                          <span class='btn btn-info attachment'>Add Note</span>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Note History</label>
-                        <div class="col-sm-8">
-                          <!-- each searchable table needs unique ID "table-filter-*" -->
-                          <table class="table table-condensed table-striped contact-history-table">
-                            <thead>
-                              <tr>
-                                <th class="tbl-date">Date</th>
-                                <th class="tbl-request">Note</th>
-                              </tr>
-                            </thead>
-
-                            <tr>
-                              <td><div class="text">15/03/2014</div></td>
-                              <td><div class="text">Note here...</div></td>
-                            </tr>
-
-                            <tr>
-                              <td><div class="text">15/03/2014</div></td>
-                              <td><div class="text">Note here...</div></td>
-                            </tr>
-
-                            <tr>
-                              <td><div class="text">15/03/2014</div></td>
-                              <td><div class="text">Note here...</div></td>
-                            </tr>
-
-                          </table>
-                          <!-- notes history table end-->
-                        </div>
-                      </div>
-
-                    </div>
-                    <!--end EPA tab-->
-
-                    <!--start permits tab-->
-                    <div id="form-permits" class="tab-panel hidden">
-
-                      <div class="form-group">
-                        <div class="col-sm-12">
-                          <!-- each searchable table needs unique ID "table-filter-*" -->
-                          <table id="table-filter-epa-docs" class="table table-condensed table-striped contact-history-table">
-                            <thead>
-                              <tr>
-                                <th class="tbl-date">Document</th>
-                                <th class="tbl-request">Date Added</th>
-                                <th class="tbl-request">Date To Be Renewed</th>
-                                <th class="tbl-edit">Edit</th>
-                              </tr>
-                            </thead>
-
-                            <tr>
-                              <td><div class="text"><a href="QPLTW Archerfield Trade Waste 2014 10 12.pdf" target="_blank">QPLTW Archerfield Trade Waste</a></div></td>
-                              <td><div class="text">12/10/2013</div></td>
-                              <td><div class="text">12/10/2014</div></td>
-                              <td>
-                                <div class="text">
-                                  <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
-                                </div>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td><div class="text"><a href="QPLDG Archerfield 2011 07 16.pdf" target="_blank">QPLDG Archerfield</a></div></td>
-                              <td><div class="text">16/07/2011</div></td>
-                              <td><div class="text">16/07/2016</div></td>
-                              <td>
-                                <div class="text">
-                                  <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
-                                </div>
-                              </td>
-                            </tr>
-
-                          </table>
-                          <!-- category table end-->
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-8"></label>
-                        <div class="col-sm-4">
-                          <input type="file" class="form-control">
-                          <span class='btn btn-info file-select'>Add Document</span>
-                        </div>
-                      </div>
-
-                    </div>
-                    <!--end permits tab-->
-
-                    <!--start dg tab-->
-                    <div id="form-dg" class="tab-panel hidden">
-
-                      <div class="form-group">
-                        <div class="col-sm-12">
-                          <!-- each searchable table needs unique ID "table-filter-*" -->
-                          <table id="table-filter-epa-docs" class="table table-condensed table-striped contact-history-table">
-                            <thead>
-                              <tr>
-                                <th class="tbl-date">Document</th>
-                                <th class="tbl-request">Date Added</th>
-                                <th class="tbl-request">Date To Be Renewed</th>
-                                <th class="tbl-edit">Edit</th>
-                              </tr>
-                            </thead>
-
-                            <tr>
-                              <td><div class="text"><a href="#">DG Manifest</a></div></td>
-                              <td><div class="text">15/03/2014</div></td>
-                              <td><div class="text">15/03/2014</div></td>
-                              <td>
-                                <div class="text">
-                                  <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
-                                </div>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td><div class="text"><a href="#">MSDS</a></div></td>
-                              <td><div class="text">15/03/2014</div></td>
-                              <td><div class="text">15/03/2014</div></td>
-                              <td>
-                                <div class="text">
-                                  <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
-                                </div>
-                              </td>
-                            </tr>
-
-                          </table>
-                          <!-- category table end-->
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-8"></label>
-                        <div class="col-sm-4">
-                          <input type="file" class="form-control">
-                          <span class='btn btn-info file-select'>Add Document</span>
-                        </div>
-                      </div>
-
-                    </div>
-                    <!--end dg tab-->
-
-                  </form>
-
-                </div>
+              <div class="form-buttons">
+                <input type="submit" value="Save" class="form-button save-button" data-role="button" />
+                <input type="submit" value="Edit" class="form-button cancel-button" data-role="button" />
               </div>
-              <!-- end form panel 1 -->
 
-            </div>
+              <!--start EPA tab-->
+              <div class="tab-panel" id="form-epa">
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">EPA Licence Number</label>
+                  <div class="col-sm-8">
+                    <input disabled class="form-control" value="4874389" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Works Approval Number</label>
+                  <div class="col-sm-8">
+                    <input disabled class="form-control" value="22356" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">EPA Contact Name</label>
+                  <div class="col-sm-8">
+                    <input disabled class="form-control" value="John Smith" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">EPA Contact Phone</label>
+                  <div class="col-sm-8">
+                    <input disabled class="form-control" value="02 9847381" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Site Contact</label>
+                  <div class="col-sm-8">
+                    <input disabled class="form-control" value="Greg Johnson" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">EPA Contact Phone</label>
+                  <div class="col-sm-8">
+                    <input disabled class="form-control" value="02 48284756" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Documents</label>
+                  <div class="col-sm-8">
+                    <!-- each searchable table needs unique ID "table-filter-*" -->
+                    <table class="table table-condensed table-striped contact-history-table">
+                      <thead>
+                        <tr>
+                          <th class="tbl-date">Document</th>
+                          <th class="tbl-request">Date Added</th>
+                          <th class="tbl-edit">Edit</th>
+                        </tr>
+                      </thead>
+
+                      <tr>
+                        <td><div class="text"><a href="#">epa-report.pdf</a></div></td>
+                        <td><div class="text">15/03/2014</div></td>
+                        <td>
+                          <div class="text">
+                            <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td><div class="text"><a href="#">epa-costing.pdf</a></div></td>
+                        <td><div class="text">15/03/2014</div></td>
+                        <td>
+                          <div class="text">
+                            <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td><div class="text"><a href="#">epa-facility.pdf</a></div></td>
+                        <td><div class="text">15/03/2014</div></td>
+                        <td>
+                          <div class="text">
+                            <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                          </div>
+                        </td>
+                      </tr>
+
+                    </table>
+                    <!-- category table end-->
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Add Document</label>
+                  <div class="col-sm-8">
+                    <input type="file" class="form-control">
+                    <span class='btn btn-info file-select'>Select File</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Notes</label>
+                  <div class="col-sm-8">
+                    <textarea class="form-control" rows="4"></textarea>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label"></label>
+                  <label class="col-sm-4 control-label"></label>
+                  <div class="col-sm-4">
+                    <span class='btn btn-info attachment'>Add Note</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Note History</label>
+                  <div class="col-sm-8">
+                    <!-- each searchable table needs unique ID "table-filter-*" -->
+                    <table class="table table-condensed table-striped contact-history-table">
+                      <thead>
+                        <tr>
+                          <th class="tbl-date">Date</th>
+                          <th class="tbl-request">Note</th>
+                        </tr>
+                      </thead>
+
+                      <tr>
+                        <td><div class="text">15/03/2014</div></td>
+                        <td><div class="text">Note here...</div></td>
+                      </tr>
+
+                      <tr>
+                        <td><div class="text">15/03/2014</div></td>
+                        <td><div class="text">Note here...</div></td>
+                      </tr>
+
+                      <tr>
+                        <td><div class="text">15/03/2014</div></td>
+                        <td><div class="text">Note here...</div></td>
+                      </tr>
+
+                    </table>
+                    <!-- notes history table end-->
+                  </div>
+                </div>
+
+              </div>
+              <!--end EPA tab-->
+
+              <!--start permits tab-->
+              <div id="form-permits" class="tab-panel hidden">
+
+                <div class="form-group">
+                  <div class="col-sm-12">
+                    <!-- each searchable table needs unique ID "table-filter-*" -->
+                    <table id="table-filter-epa-docs" class="table table-condensed table-striped contact-history-table">
+                      <thead>
+                        <tr>
+                          <th class="tbl-date">Document</th>
+                          <th class="tbl-request">Date Added</th>
+                          <th class="tbl-request">Date To Be Renewed</th>
+                          <th class="tbl-edit">Edit</th>
+                        </tr>
+                      </thead>
+
+                      <tr>
+                        <td><div class="text"><a href="QPLTW Archerfield Trade Waste 2014 10 12.pdf" target="_blank">QPLTW Archerfield Trade Waste</a></div></td>
+                        <td><div class="text">12/10/2013</div></td>
+                        <td><div class="text">12/10/2014</div></td>
+                        <td>
+                          <div class="text">
+                            <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td><div class="text"><a href="QPLDG Archerfield 2011 07 16.pdf" target="_blank">QPLDG Archerfield</a></div></td>
+                        <td><div class="text">16/07/2011</div></td>
+                        <td><div class="text">16/07/2016</div></td>
+                        <td>
+                          <div class="text">
+                            <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                          </div>
+                        </td>
+                      </tr>
+
+                    </table>
+                    <!-- category table end-->
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-8"></label>
+                  <div class="col-sm-4">
+                    <input type="file" class="form-control">
+                    <span class='btn btn-info file-select'>Add Document</span>
+                  </div>
+                </div>
+
+              </div>
+              <!--end permits tab-->
+
+              <!--start dg tab-->
+              <div id="form-dg" class="tab-panel hidden">
+
+                <div class="form-group">
+                  <div class="col-sm-12">
+                    <!-- each searchable table needs unique ID "table-filter-*" -->
+                    <table id="table-filter-epa-docs" class="table table-condensed table-striped contact-history-table">
+                      <thead>
+                        <tr>
+                          <th class="tbl-date">Document</th>
+                          <th class="tbl-request">Date Added</th>
+                          <th class="tbl-request">Date To Be Renewed</th>
+                          <th class="tbl-edit">Edit</th>
+                        </tr>
+                      </thead>
+
+                      <tr>
+                        <td><div class="text"><a href="#">DG Manifest</a></div></td>
+                        <td><div class="text">15/03/2014</div></td>
+                        <td><div class="text">15/03/2014</div></td>
+                        <td>
+                          <div class="text">
+                            <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td><div class="text"><a href="#">MSDS</a></div></td>
+                        <td><div class="text">15/03/2014</div></td>
+                        <td><div class="text">15/03/2014</div></td>
+                        <td>
+                          <div class="text">
+                            <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
+                          </div>
+                        </td>
+                      </tr>
+
+                    </table>
+                    <!-- category table end-->
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-8"></label>
+                  <div class="col-sm-4">
+                    <input type="file" class="form-control">
+                    <span class='btn btn-info file-select'>Add Document</span>
+                  </div>
+                </div>
+
+              </div>
+              <!--end dg tab-->
+
+            </form>
+
           </div>
         </div>
-        <!-- end tab row-->
+        <!-- end form panel 1 -->
 
       </div>
-      <!-- end form container-->
-
     </div>
-    <!-- page end -->
+  </div>
+  <!-- end tab row-->
+
+</div>
+<!-- end form container-->
 
 
- <!--    <div id="plant" class="hidden">
-      <a href="#"><img class="whole-plant" src="../Content/images/plant-process.jpg"></a>
-    </div> -->
-
-    <script src="../Scripts/js/jquery-1.10.2.min.js"></script>
-    <script src="../Scripts/js/bootstrap.min.js"></script>
-    <script src="../Scripts/js/less.js" type="text/javascript"></script>
-    <script src="../Scripts/js/bootstrap-select.js"></script>
-    <script src="../Scripts/js/bootstrap-datepicker.js"></script>
-    <script src="../Scripts/js/jquery-ui.custom.js"></script>
-    <script src="../Scripts/js/jquery.qtip.min.js"></script>
-    <script src="../Scripts/js/timepicker.js"></script>
-    <script src="../Scripts/js/raphael.js"></script>
-    <script src="../Morris/morris.min.js"></script>
-    <script src="../Scripts/js/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="../Scripts/js/jquery-jvectormap-au-mill-en.js"></script>
-    <script src="../Scripts/js/jquery.slidepanel.js"></script>
-    <script src="../Scripts/js/override.js"></script>
-
-
-    <script>
-      $('ul.nav-tabs.compliance-tabs li a').on('click', toggle_tab_compliance);
-      $('.form-button.cancel-button').on('click', enable_epa_fields);
-      $('.form-button.save-button').on('click', disable_epa_fields);
-    </script>
-
-  </body>
-</html>
+<script>
+  $('ul.nav-tabs.compliance-tabs li a').on('click', toggle_tab_compliance);
+  $('.form-button.cancel-button').on('click', enable_epa_fields);
+  $('.form-button.save-button').on('click', disable_epa_fields);
+</script>
