@@ -31,7 +31,6 @@ function open_notify_dialog() {
   }
 });
 
-
 }
 
 function goto_compliance_epa () {

@@ -65,33 +65,20 @@ td {
 
 //left bar
 .left-bar {
-  width: @left-bar-width;
+  -ms-overflow-style: none;/*auto | none | scrollbar | -ms-autohiding-scrollbar*/
+  width: 220px;
   background : @left-bar-colour;
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
-  z-index: 4;
+  z-index: 3;
   border-right: 1px solid darken(@left-bar-colour, 20%);
-  .powered {
-    position: absolute;
-    bottom: 15px;
-    padding: 0 10px 0 10px;
-    span {
-      color: @white;
-      font-size: 11px;
-      display: block;
-    }
-    span:nth-child(1) {
-      font-weight: bold;
-      font-size: 13px;
-    }
-  }
   .icon {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 80px;
     height: 80px;
-    margin-left: 50px;
+    margin-left: 70px;
     margin-right: auto;
     border-radius: 8px;
     background-color: @form-highlight-colour;
@@ -108,6 +95,21 @@ td {
   }
 }
 
+#menu-tree {
+  height: 100%;
+}
+
+//menu panel accordion
+#accordion-menu {
+  padding: 0;
+  height: 90%;
+  overflow: scroll;
+  overflow-x: hidden;
+  width: 200px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
 
 //filter list
 
@@ -774,6 +776,69 @@ input[type="date"] {
   height: 30px;
   float: right;
   font-weight: bold;
+}
+
+.item {
+  width: 100%;
+  display: block !important;
+  height: 90%;
+  overflow-y: none;
+  font-weight: bold;
+  ul {
+    background-color: @left-bar-colour;
+  }
+  li {
+    width: 200px;
+    background-color: @accordion-item;
+    list-style: none;
+    border-bottom: 1px solid @accordion-item;
+    margin-top: 5px;
+    text-align: left;
+    &.second {
+      background-color: lighten(@accordion-item, 15%);
+      border-bottom: 1px solid @left-bar-colour;
+      a {
+        margin-left: 10px;
+      }
+    }
+    &.third {
+      background-color: lighten(@accordion-item, 20%);
+      border-bottom: 1px solid @left-bar-colour;
+      a {
+        margin-left: 20px;
+      }
+    }
+    &.fourth {
+      background-color: lighten(@accordion-item, 25%);
+      border-bottom: 1px solid @left-bar-colour;
+      a {
+        margin-left: 30px;
+      }
+    }
+    &.layer {
+      border-bottom: none;
+      background-color: @left-bar-colour;
+    }
+    a {
+      color: @white;
+      text-decoration: none;
+      padding: 5px;
+      vertical-align: middle;
+      display: inline-block;
+      &.truncate {
+        text-overflow: ellipsis;
+        width: 140px;
+        white-space: nowrap;
+        overflow: hidden;
+        padding-right: 0;
+      }
+      &.link {
+        background-color: @left-bar-colour;
+        width: 100%;
+        color: @white;
+      }
+    }
+  }
 }
 
 
