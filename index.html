@@ -22,7 +22,7 @@
     <div id="map-page">
 
       <!-- top bar -->
-      <div class="top-bar"></div>
+      <div id="insert-top"></div>
 
       <!-- left bar pane map -->
       <div id="insert-left"></div>
@@ -30,25 +30,25 @@
       <!-- main content area on map page -->
       <div>
         <div id="insert-map">
-
           <div class="map-container"><div id="map-canvas"></div></div>
-
           <a id="slidepanel-link" href="bottom_bar.html" data-slidepanel="panel"><span>show asset list</span></a>
+          <!-- <a id="slidepanel-filters-link" href="map_filters.html" data-slidepanel="panel"><span><<</span></a> -->
+          <div id="insert-filter-list"></div>
         </div>
+
+        <div id="insert-content"></div>
+
       </div>
       <!-- end main content area on form page -->
 
       <!-- bottom bar-->
-      <div id="insert-bottom">
-      </div>
+      <div id="insert-bottom"></div>
+
+      <!--insert right filter panel-->
+      <div id="insert-right"></div>
 
     </div>
     <!-- page end -->
-
-
-    <div id="plant" class="hidden">
-      <a href="asset.html"><img class="whole-plant" src="../Content/images/plant-process.jpg"></a>
-    </div>
 
     <script src="../Scripts/js/jquery-1.10.2.min.js"></script>
     <script src="../Scripts/js/bootstrap.min.js"></script>
@@ -134,7 +134,6 @@
     <script>
       insert_left();
       insert_top();
-      $('.pill-select').on('click', toggle_rw_select);
     </script>
 
   </body>

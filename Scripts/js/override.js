@@ -1,14 +1,24 @@
 //dom ready functions
 $(function(){
-    // $('#map-canvas').on('click', show_map_qtip);
     $('#nation-search').on('keyup', table_search_vals);
     $('#document-search').on('keyup', doc_table_search_vals);
-    $('[data-slidepanel]').slidepanel({
+    $('[data-slidepanel="panel"]').slidepanel({
         orientation: 'bottom',
-        mode: 'push'
+        mode: 'overlay'
     })
-    $('.open-notify').on('click', open_notify_dialog);
+    // $('[data-slidepanel]').slidepanel({
+    //     orientation: 'right',
+    //     mode: 'overlay'
+    // })
+  insert_filter_list();
 });
+
+function insert_filter_list() {
+  $('#insert-filter-list').empty();
+  $.get('map_filters.html', function(data) {
+    $('#insert-filter-list').html(data);
+  });
+}
 
 function open_notify_dialog() {
   // bootbox.alert('Burner fuel consumption below theoretical minimum.');
@@ -22,7 +32,7 @@ function open_notify_dialog() {
     success: {
       label: "View Report",
       className: "btn-success",
-      callback: goto_compliance_epa
+      callback: goto_compliance_page
     },
     "Close": {
       className: "btn-info",
@@ -33,8 +43,50 @@ function open_notify_dialog() {
 
 }
 
-function goto_compliance_epa () {
-  window.location = 'compliance.html';
+function goto_details_page() {
+  remove_bottom();
+  $('#insert-map').empty();
+  $('#insert-content').empty();
+  $.get('details.html', function(data) {
+    $('#insert-content').html(data);
+  });
+}
+
+function remove_bottom() {
+  $('#insert-bottom').empty();
+  $('#slidepanel').removeClass('cb_slide_panel').empty();
+}
+
+function goto_plant_page() {
+  $('#insert-map').empty();
+  $('#insert-content').empty();
+  $.get('plant.html', function(data) {
+    $('#insert-content').html(data);
+  });
+}
+
+function goto_compliance_page() {
+  $('#insert-map').empty();
+  $('#insert-content').empty();
+  $.get('compliance.html', function(data) {
+    $('#insert-content').html(data);
+  });
+}
+
+function goto_asset_page() {
+  $('#insert-map').empty();
+  $('#insert-content').empty();
+  $.get('asset.html', function(data) {
+    $('#insert-content').html(data);
+  });
+}
+
+function goto_stats_page() {
+  $('#insert-map').empty();
+  $('#insert-content').empty();
+  $.get('stats.html', function(data) {
+    $('#insert-content').html(data);
+  });
 }
 
 function toggle_tab_compliance() {

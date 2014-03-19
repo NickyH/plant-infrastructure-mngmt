@@ -1,18 +1,22 @@
+<!-- top bar -->
 <div class="top-bar">
-  <div class="utility-tab map-tools">
-    <!-- icons for map tools -->
+  <!-- <div class="asset-headers type">Bitumen Tank</div>
+  <div class="asset-headers site">150 Boniface Street Archerfield, QLD</div> -->
 
-
-    <!--form icons-->
-
-
-    <!-- history icon -->
-
-
+  <div class='icon-container'>
+    <img id="icon-stats" src="../Content/images/icon-navigation-stats.png">
+    <img id="icon-staff" src="../Content/images/icon-navigation-staff.png">
+    <img id="icon-comp" src="../Content/images/icon-navigation-compliance.png">
+    <img id="icon-plant" src="../Content/images/icon-navigation-asset.png">
+    <img id="icon-details" src="../Content/images/icon-navigation-details.png">
   </div>
 
 </div>
 
 <script>
-  // $('.icon-form').on('click', show_correct_ovals);
+$('#icon-stats').on('click', goto_stats_page);
+// $('#icon-staff').on('click', goto_staff_page);
+$('#icon-comp').on('click', goto_compliance_page);
+$('#icon-plant').on('click', goto_plant_page);
+$('#icon-details').on('click', goto_details_page);
 </script>

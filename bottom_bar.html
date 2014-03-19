@@ -30,7 +30,7 @@
         <td>08 9844 3647</td>
       </tr>
       <tr>
-        <td><a href="details.html">Archerfield</a></td>
+        <td class="bottom-bar-link details">Archerfield</td>
         <td>150 Boniface Street Archerfield</td>
         <td>Asphalt plant, Bitumen/Emulsion Tanks, Workshop, Office</td>
         <td>QLD</td>
@@ -307,4 +307,5 @@
 
 <script>
   $('#nation-search').on('keyup', table_search_vals);
+  $('.bottom-bar-link.details').on('click', goto_details_page);
 </script>
