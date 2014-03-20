@@ -1,0 +1,94 @@
+<!-- forms content container -->
+<div class="container-fluid compliance-container">
+
+  <div class="title-container">
+    <div class="asset-headers type">Archerfield</div>
+    <div class="asset-headers site">150 Boniface Street, Archerfield, QLD</div>
+  </div>
+
+  <!-- row 1-->
+  <div class="row">
+    <div class="col-12">
+      <div class="row-fluid">
+
+        <!-- form panel 1 -->
+        <div class="col-lg-12 col-md-12 col-sm-12">
+
+          <div class="form-panel full-width">
+
+            <form class="form-horizontal container">
+              <img class="whole-plant" src="../Content/images/archerfield_aerial.jpg">
+            </form>
+          </div>
+
+        </div>
+        <!-- end form panel 1-->
+
+      </div>
+    </div>
+  </div>
+  <!-- end row 1-->
+
+  <!-- row 2-->
+  <div class="row">
+    <div class="col-12">
+      <div class="row-fluid">
+
+        <!-- form panel 1 -->
+        <div class="col-lg-12 col-md-12 col-sm-12">
+
+          <div class="form-panel full-width">
+
+            <form class="form-horizontal container">
+
+              <div class="form-group" role="search">
+                <div class="col-sm-12">
+                  <input id="nation-search" type="text" class="form-control search" placeholder="Search">
+                </div>
+              </div>
+
+              <table id="table-filter-1" class="table table-condensed table-striped reference-history">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Stats</th>
+                    <th>Notifications</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td class='bottom-bar-link plant'>Plant</td>
+                  <td class='bottom-bar-link stats'><span class="glyphicon glyphicon-stats"></span></td>
+                  <td><span class="glyphicon glyphicon-flag open-notify"></span></td>
+                </tr>
+                <tr>
+                  <td>Staff List</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td class='bottom-bar-link compliance'>Compliance</td>
+                  <td class='bottom-bar-link stats'><span class="glyphicon glyphicon-stats"></span></td>
+                  <td><span class="glyphicon glyphicon-flag open-notify"></span></td>
+                </tr>
+              </table>
+            </form>
+
+          </div>
+        </div>
+        <!-- end form panel 1-->
+
+      </div>
+    </div>
+  </div>
+  <!-- end row 2-->
+
+</div>
+<!-- end main content area on form page -->
+
+
+<script>
+$('.bottom-bar-link.plant').on('click', goto_plant_page);
+$('.bottom-bar-link.compliance').on('click', goto_compliance_page);
+$('.bottom-bar-link.stats').on('click', goto_stats_page);
+$('.open-notify').on('click', open_notify_dialog);
+</script>

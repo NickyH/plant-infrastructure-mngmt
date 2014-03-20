@@ -43,11 +43,12 @@ function open_notify_dialog() {
 
 }
 
-function goto_details_page() {
+function goto_site_page() {
   remove_bottom();
   $('#insert-map').empty();
+  $('#insert-map').empty();
   $('#insert-content').empty();
-  $.get('details.html', function(data) {
+  $.get('site.html', function(data) {
     $('#insert-content').html(data);
   });
 }
