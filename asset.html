@@ -27,88 +27,39 @@
 
             <form class="form-horizontal container">
 
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Notes</label>
-                  <div class="col-sm-8">
-                    <textarea class="form-control" rows="4"></textarea>
-                  </div>
+              <div class="form-group" role="search">
+                <div class="col-sm-12">
+                  <input id="document-search" type="text" class="form-control search" placeholder="Search">
                 </div>
+              </div>
 
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Note Category</label>
-                  <div class="col-sm-8">
-                    <select class="selectpicker show-tick form-control" title=''>
-                      <option data-hidden="true"></option>
-                      <option>Maintenance</option>
-                      <option>New Work</option>
-                      <option>Safety/Enviro</option>
-                      <option>General</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Date Added</label>
-                  <div class="col-sm-8">
-                    <div class="input-group merged">
-                      <input type="text" class="form-control date datepicker" />
-                      <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label"></label>
-                  <label class="col-sm-4 control-label"></label>
-                  <div class="col-sm-4">
-                    <span class='btn btn-info attachment'>Add Note</span>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="col-sm-4 control-label">Note History</label>
-                  <div class="col-sm-8"></div>
-                </div>
-
-                <div class="form-group">
-                  <div class="col-sm-12">
-                    <!-- each searchable table needs unique ID "table-filter-*" -->
-                    <table class="table table-condensed table-striped contact-history-table">
-                      <thead>
-                        <tr>
-                          <th class="tbl-date">Date</th>
-                          <th class="tbl-request">Category</th>
-                          <th class="tbl-request">Note</th>
-                        </tr>
-                      </thead>
-                      <tr>
-                        <td><div class="text">02/01/2014</div></td>
-                        <td><div class="text">Maintenance</div></td>
-                        <td><div class="text">Tank 1 stirrer belt worn</div></td>
-                      </tr>
-                      <tr>
-                        <td><div class="text">22/01/2014</div></td>
-                        <td><div class="text">Maintenance</div></td>
-                        <td><div class="text">Tank 1 stirrer belt failed</div></td>
-                      </tr>
-                      <tr>
-                        <td><div class="text">23/01/2014</div></td>
-                        <td><div class="text">Maintenance</div></td>
-                        <td><div class="text">Tank 1 stirrer belt replaced</div></td>
-                      </tr>
-                      <tr>
-                        <td><div class="text">02/02/2014</div></td>
-                        <td><div class="text">Other/General</div></td>
-                        <td><div class="text">Tank 1 breather spill needs cleaning</div></td>
-                      </tr>
-                    </table>
-                    <!-- notes history table end-->
-                  </div>
-                </div>
+              <table id="table-filter-2" class="table table-condensed table-striped reference-history">
+                <thead>
+                  <tr>
+                    <th>Document</th>
+                    <th>Uploaded</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td><a href="tank_schematic_1.pdf" target="_blank">Tank Schematic</a></td>
+                  <td>15/12/2012</td>
+                </tr>
+                <tr>
+                  <td><a href="#">System Schematic</a></td>
+                  <td>05/06/2012</td>
+                </tr>
+                <tr>
+                  <td><a href="#">Bitumen Transfer Procedure</a></td>
+                  <td>10/10/2011</td>
+                </tr>
+                <tr>
+                  <td><a href="#">Internal Inspection</a></td>
+                  <td>15/12/2012</td>
+                </tr>
+              </table>
 
             </form>
+
 
           </div>
         </div>
@@ -206,53 +157,88 @@
 
             <form class="form-horizontal container">
 
-              <div class="form-column col-lg-6 col-md-6 col-sm-12">
-
-                <div class="form-group" role="search">
-                <div class="col-sm-12">
-                  <input id="document-search" type="text" class="form-control search" placeholder="Search">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Notes</label>
+                  <div class="col-sm-8">
+                    <textarea class="form-control" rows="4"></textarea>
+                  </div>
                 </div>
-              </div>
-
-              <table id="table-filter-2" class="table table-condensed table-striped reference-history">
-                <thead>
-                  <tr>
-                    <th>Document</th>
-                    <th>Uploaded</th>
-                  </tr>
-                </thead>
-                <tr>
-                  <td><a href="tank_schematic_1.pdf" target="_blank">Tank Schematic</a></td>
-                  <td>15/12/2012</td>
-                </tr>
-                <tr>
-                  <td><a href="#">System Schematic</a></td>
-                  <td>05/06/2012</td>
-                </tr>
-                <tr>
-                  <td><a href="#">Bitumen Transfer Procedure</a></td>
-                  <td>10/10/2011</td>
-                </tr>
-                <tr>
-                  <td><a href="#">Internal Inspection</a></td>
-                  <td>15/12/2012</td>
-                </tr>
-              </table>
-
-              </div>
-              <!-- end form-column-->
-
-              <div class="form-column col-lg-6 col-md-6 col-sm-12">
 
                 <div class="form-group">
+                  <label class="col-sm-4 control-label">Note Category</label>
+                  <div class="col-sm-8">
+                    <select class="selectpicker show-tick form-control" title=''>
+                      <option data-hidden="true"></option>
+                      <option>Maintenance</option>
+                      <option>New Work</option>
+                      <option>Safety/Enviro</option>
+                      <option>General</option>
+                    </select>
+                  </div>
+                </div>
 
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Date Added</label>
+                  <div class="col-sm-8">
+                    <div class="input-group merged">
+                      <input type="text" class="form-control date datepicker" />
+                      <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
 
-              </div>
-              <!-- end form-column-->
+                <div class="form-group">
+                  <label class="col-sm-4 control-label"></label>
+                  <label class="col-sm-4 control-label"></label>
+                  <div class="col-sm-4">
+                    <span class='btn btn-info attachment'>Add Note</span>
+                  </div>
+                </div>
 
-              <span class="glyphicon insert-cross-icon"></span>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label">Note History</label>
+                  <div class="col-sm-8"></div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-sm-12">
+                    <!-- each searchable table needs unique ID "table-filter-*" -->
+                    <table class="table table-condensed table-striped contact-history-table">
+                      <thead>
+                        <tr>
+                          <th class="tbl-date">Date</th>
+                          <th class="tbl-request">Category</th>
+                          <th class="tbl-request">Note</th>
+                        </tr>
+                      </thead>
+                      <tr>
+                        <td><div class="text">02/01/2014</div></td>
+                        <td><div class="text">Maintenance</div></td>
+                        <td><div class="text">Tank 1 stirrer belt worn</div></td>
+                      </tr>
+                      <tr>
+                        <td><div class="text">22/01/2014</div></td>
+                        <td><div class="text">Maintenance</div></td>
+                        <td><div class="text">Tank 1 stirrer belt failed</div></td>
+                      </tr>
+                      <tr>
+                        <td><div class="text">23/01/2014</div></td>
+                        <td><div class="text">Maintenance</div></td>
+                        <td><div class="text">Tank 1 stirrer belt replaced</div></td>
+                      </tr>
+                      <tr>
+                        <td><div class="text">02/02/2014</div></td>
+                        <td><div class="text">Other/General</div></td>
+                        <td><div class="text">Tank 1 breather spill needs cleaning</div></td>
+                      </tr>
+                    </table>
+                    <!-- notes history table end-->
+                  </div>
+                </div>
+
             </form>
-
 
           </div>
         </div>
