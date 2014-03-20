@@ -119,17 +119,10 @@ function toggle_tab_site() {
   if (tab_name === 'tab-siteplan') {
     $('#form-siteplan').removeClass('hidden');
     $('#form-siteprocess').addClass('hidden');
-    $('#form-assetlist').addClass('hidden');
   }
   if (tab_name === 'tab-siteprocess') {
     $('#form-siteplan').addClass('hidden');
     $('#form-siteprocess').removeClass('hidden');
-    $('#form-assetlist').addClass('hidden');
-  }
-  if (tab_name === 'tab-assetlist') {
-    $('#form-siteplan').addClass('hidden');
-    $('#form-siteprocess').addClass('hidden');
-    $('#form-assetlist').removeClass('hidden');
   }
 }
 
