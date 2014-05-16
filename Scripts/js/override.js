@@ -33,14 +33,30 @@ function open_notify_dialog() {
       label: "View Report",
       className: "btn-success",
       callback: goto_compliance_page
-    },
-    "Close": {
-      className: "btn-info",
-      callback: function() {}
+      },
+      "Close": {
+        className: "btn-info",
+        callback: function() {}
+      }
     }
-  }
-});
+  });
+}
 
+function open_expire_dialog() {
+  // bootbox.alert('Burner fuel consumption below theoretical minimum.');
+
+  bootbox.dialog({
+  message: "This document is due to expire within three months",
+  title: "Document expiring soon",
+  closeButton: false,
+  className: "compliance-alert-bootbox",
+  buttons: {
+      "Close": {
+        className: "btn-info",
+        callback: function() {}
+      }
+    }
+  });
 }
 
 function goto_site_page() {
@@ -66,6 +82,14 @@ function goto_plant_page() {
   });
 }
 
+function goto_workshop_page() {
+  $('#insert-map').empty();
+  $('#insert-content').empty();
+  $.get('workshop.html', function(data) {
+    $('#insert-content').html(data);
+  });
+}
+
 function goto_compliance_page() {
   $('#insert-map').empty();
   $('#insert-content').empty();
@@ -78,6 +102,14 @@ function goto_asset_page() {
   $('#insert-map').empty();
   $('#insert-content').empty();
   $.get('asset.html', function(data) {
+    $('#insert-content').html(data);
+  });
+}
+
+function goto_mobile_asset_page() {
+  $('#insert-map').empty();
+  $('#insert-content').empty();
+  $.get('mobile_asset.html', function(data) {
     $('#insert-content').html(data);
   });
 }

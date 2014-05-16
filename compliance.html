@@ -83,6 +83,7 @@
                         <tr>
                           <th class="tbl-date">Document</th>
                           <th class="tbl-request">Date Added</th>
+                          <th class="">Alerts</th>
                           <th class="tbl-edit">Edit</th>
                         </tr>
                       </thead>
@@ -90,6 +91,7 @@
                       <tr>
                         <td><div class="text"><a href="#">EPA Annual Return</a></div></td>
                         <td><div class="text">02/06/2011</div></td>
+                        <td></td>
                         <td>
                           <div class="text">
                             <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
@@ -100,6 +102,7 @@
                       <tr>
                         <td><div class="text"><a href="#">EPA Annual Return</a></div></td>
                         <td><div class="text">02/06/2012</div></td>
+                        <td></td>
                         <td>
                           <div class="text">
                             <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
@@ -110,6 +113,7 @@
                       <tr>
                         <td><div class="text"><a href="#">EPA Annual Return</a></div></td>
                         <td><div class="text">02/06/2013</div></td>
+                        <td><span class="glyphicon glyphicon-flag expire-alert"></span></td>
                         <td>
                           <div class="text">
                             <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
@@ -187,7 +191,8 @@
                           <th class="tbl-date">Document</th>
                           <th class="tbl-request">Date Added</th>
                           <th class="tbl-request">Date To Be Renewed</th>
-                          <th class="tbl-edit">Edit</th>
+                          <th></th>
+                          <th class="tbl-edit"></th>
                         </tr>
                       </thead>
 
@@ -195,6 +200,7 @@
                         <td><div class="text"><a href="QPLTW Archerfield Trade Waste 2014 10 12.pdf" target="_blank">QPLTW Archerfield Trade Waste</a></div></td>
                         <td><div class="text">12/10/2013</div></td>
                         <td><div class="text">12/10/2014</div></td>
+                        <td></td>
                         <td>
                           <div class="text">
                             <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
@@ -206,6 +212,7 @@
                         <td><div class="text">EPA Works Approval</div></td>
                         <td><div class="text">16/07/2011</div></td>
                         <td><div class="text">16/07/2014</div></td>
+                        <td><span class="glyphicon glyphicon-flag expire-alert"></span></td>
                         <td>
                           <div class="text">
                             <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
@@ -217,6 +224,7 @@
                         <td><div class="text">EPA Licence</div></td>
                         <td><div class="text">16/07/2011</div></td>
                         <td><div class="text">16/07/2014</div></td>
+                        <td><span class="glyphicon glyphicon-flag expire-alert"></span></td>
                         <td>
                           <div class="text">
                             <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
@@ -252,6 +260,7 @@
                           <th class="tbl-date">Document</th>
                           <th class="tbl-request">Date Added</th>
                           <th class="tbl-request">Date To Be Renewed</th>
+                          <th></th>
                           <th class="tbl-edit">Edit</th>
                         </tr>
                       </thead>
@@ -260,6 +269,7 @@
                         <td><div class="text"><a href="Archerfield_Hazardous_Goods.pdf" target="_blank">Hazardous Goods</a></div></td>
                         <td><div class="text">15/03/2014</div></td>
                         <td><div class="text">15/03/2014</div></td>
+                        <td></td>
                         <td>
                           <div class="text">
                             <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
@@ -271,6 +281,7 @@
                         <td><div class="text"><a href="#">MSDS</a></div></td>
                         <td><div class="text">15/03/2014</div></td>
                         <td><div class="text">15/03/2014</div></td>
+                        <td><span class="glyphicon glyphicon-flag expire-alert"></span></td>
                         <td>
                           <div class="text">
                             <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
@@ -282,6 +293,7 @@
                         <td><div class="text"><a href="QPLDG Archerfield 2011 07 16.pdf" target="_blank">QPLDG Archerfield</a></div></td>
                         <td><div class="text">16/07/2011</div></td>
                         <td><div class="text">16/07/2016</div></td>
+                        <td></td>
                         <td>
                           <div class="text">
                             <a href="#" title="Edit"><div class="glyphicon glyphicon-edit"></div></a></a>
@@ -324,4 +336,5 @@
   $('ul.nav-tabs.compliance-tabs li a').on('click', toggle_tab_compliance);
   $('.form-button.cancel-button').on('click', enable_epa_fields);
   $('.form-button.save-button').on('click', disable_epa_fields);
+  $('.expire-alert').on('click', open_expire_dialog);
 </script>

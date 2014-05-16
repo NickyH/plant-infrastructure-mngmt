@@ -61,6 +61,11 @@
                   <td><span class="glyphicon glyphicon-flag open-notify"></span></td>
                 </tr>
                 <tr>
+                  <td class='bottom-bar-link workshop'>Workshop</td>
+                  <td class='bottom-bar-link stats'><span class="glyphicon glyphicon-stats"></span></td>
+                  <td><span class="glyphicon glyphicon-flag open-notify"></span></td>
+                </tr>
+                <tr>
                   <td>Staff List</td>
                   <td></td>
                   <td></td>
@@ -88,6 +93,7 @@
 
 <script>
 $('.bottom-bar-link.plant').on('click', goto_plant_page);
+$('.bottom-bar-link.workshop').on('click', goto_workshop_page);
 $('.bottom-bar-link.compliance').on('click', goto_compliance_page);
 $('.bottom-bar-link.stats').on('click', goto_stats_page);
 $('.open-notify').on('click', open_notify_dialog);
