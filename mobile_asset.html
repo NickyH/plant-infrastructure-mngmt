@@ -262,12 +262,8 @@
               <div class="col-12 dashboard">
                 <div class="row">
 
-                  <div class="col-md-5">
-                    <div id="hazardsFound" class="chart small"></div>
-                  </div>
-                  <div class="col-md-1"></div>
-                  <div class="col-md-5">
-                    <div id="tasksComplete" class="chart small"></div>
+                  <div class="col-md-10">
+                    <div id="rinePavers" class="chart large"></div>
                   </div>
 
                 </div>
@@ -277,27 +273,7 @@
                 <div class="row">
 
                   <div class="col-md-10">
-                    <div id="networkInspection" class="chart large"></div>
-                  </div>
-
-                </div>
-              </div>
-
-              <div class="col-12 dashboard">
-                <div class="row">
-
-                  <div class="col-md-10">
-                    <div id="createdVsCompleted" class="chart large"></div>
-                  </div>
-
-                </div>
-              </div>
-
-              <div class="col-12 dashboard">
-                <div class="row">
-
-                  <div class="col-md-10">
-                    <div id="workEffort" class="chart large"></div>
+                    <div id="riseWaPavers" class="chart large"></div>
                   </div>
 
                 </div>
@@ -325,423 +301,163 @@
 <script type="text/javascript">
 
 // hazards found chart
-  var chartHazards = new CanvasJS.Chart("hazardsFound", {
+  var chartRinePavers = new CanvasJS.Chart("rinePavers", {
       data: [
         {
-          showInLegend: true,
           indexLabelFontSize: '14',
           indexLabelFontColor: 'white',
-          startAngle: 150,
-          indexLabelPlacement: "inside",
-          toolTipContent: "{name}: {y}%",
-          type: "pie",
+          toolTipContent: "{label}: {y}%",
+          type: "column",
           dataPoints: [
-            { y: 3,indexLabel: 'RM800', name: "Operation Servicing" },
-            { y: 1, indexLabel: 'RM600', name: "Road Furniture" },
-            { y: 27, indexLabel: 'RM500', name: "Vegetation" },
-            { y: 69, indexLabel: 'RM100', name: "Pavement" }
+            { y: 65,label: 'PA056' },
+            { y: 75, label: 'PA066' },
+            { y: 0, label: 'PA021' },
+            { y: 75, label: 'PA072' },
+            { y: 95, label: 'PA082' },
+            { y: 95, label: 'PA087' },
+            { y: 100, label: 'PA089' },
+            { y: 0, label: 'PA020' },
+            { y: 50, label: 'PA040' },
+            { y: 60, label: 'PA016' },
+            { y: 85, label: 'PA062' },
+            { y: 120, label: 'PA061' },
+            { y: 90, label: 'PA090' },
+            { y: 0, label: 'PA057' },
+            { y: 85, label: 'PA059' },
+            { y: 90, label: 'PA079' },
+            { y: 120, label: 'PA080' },
+            { y: 90, label: 'PA081' },
+            { y: 0, label: 'PA028' },
+            { y: 50, label: 'PA039' }
+          ]
+        },
+        {
+          indexLabelFontSize: '14',
+          indexLabelFontColor: 'white',
+          toolTipContent: "target 100%",
+          type: "line",
+          dataPoints: [
+            { y: 100,label: 'PA056' },
+            { y: 100, label: 'PA066' },
+            { y: 100, label: 'PA021' },
+            { y: 100, label: 'PA072' },
+            { y: 100, label: 'PA082' },
+            { y: 100, label: 'PA087' },
+            { y: 100, label: 'PA089' },
+            { y: 100, label: 'PA020' },
+            { y: 100, label: 'PA040' },
+            { y: 100, label: 'PA016' },
+            { y: 100, label: 'PA062' },
+            { y: 100, label: 'PA061' },
+            { y: 100, label: 'PA090' },
+            { y: 100, label: 'PA057' },
+            { y: 100, label: 'PA059' },
+            { y: 100, label: 'PA079' },
+            { y: 100, label: 'PA080' },
+            { y: 100, label: 'PA081' },
+            { y: 100, label: 'PA028' },
+            { y: 100, label: 'PA039' }
           ]
         }
       ],
       title:{
-            text: "Hazards Found",
+            text: "RINE Pavers",
             fontSize: "22"
           },
-      legend: {
-        fontFamily: "Arial",
-        fontSize: 14
-      },
     creditText: "",
+    axisX:{
+       labelFontFamily: "Arial",
+       labelFontColor: "black",
+       labelFontSize: 12,
+       labelAngle: -90
+      },
+    axisY:{
+       labelFontFamily: "Arial",
+       labelFontColor: "black",
+       labelFontSize: 10
+      },
     backgroundColor: "#eae8e8"
   });
-  chartHazards.render();
+  chartRinePavers.render();
 
 // tasks completed chart
-  var chartTasksComplete = new CanvasJS.Chart("tasksComplete", {
+  var chartRiseWaPavers = new CanvasJS.Chart("riseWaPavers", {
       data: [
         {
-          showInLegend: true,
+          toolTipContent: "{label}: {y}%",
+          type: "column",
+          dataPoints: [
+            { y: 22,label: 'PA018' },
+            { y: 0, label: 'PA022' },
+            { y: 80, label: 'PA073' },
+            { y: 100, label: 'PA083' },
+            { y: 0, label: 'PA037' },
+            { y: 0, label: 'PA045' },
+            { y: 35, label: 'PA044' },
+            { y: 15, label: 'PA074' },
+            { y: 50, label: 'PA050' },
+            { y: 0, label: 'PA076' },
+            { y: 115, label: 'PA077' },
+            { y: 60, label: 'PA007' },
+            { y: 0, label: 'PA078' },
+            { y: 80, label: 'PA075' },
+            { y: 65, label: 'PA033' },
+            { y: 0, label: 'PA084' },
+            { y: 100, label: 'PA085' },
+            { y: 100, label: 'PA088' },
+            { y: 75, label: 'PA034' },
+            { y: 30, label: 'PA027' },
+            { y: 55, label: 'PA086' }
+          ]
+        },
+        {
           indexLabelFontSize: '14',
           indexLabelFontColor: 'white',
-          startAngle: 150,
-          indexLabelPlacement: "inside",
-          toolTipContent: "{name}: ${y}",
-          type: "pie",
+          toolTipContent: "target 100%",
+          type: "line",
           dataPoints: [
-            { y: 33000,indexLabel: 'RM800', name: "Operation Servicing" },
-            { y: 2000, indexLabel: 'RM700', name: "Structures" },
-            { y: 59000, indexLabel: 'RM600', name: "Road Furniture" },
-            { y: 75000, indexLabel: 'RM500', name: "Vegetation" },
-            { y: 90000, indexLabel: 'RM400', name: "Drainage" },
-            { y: 10000, indexLabel: 'RM200', name: "Shoulder" },
-            { y: 557000, indexLabel: 'RM100', name: "Pavement" }
+            { y: 100,label: 'PA018' },
+            { y: 100, label: 'PA022' },
+            { y: 100, label: 'PA073' },
+            { y: 100, label: 'PA083' },
+            { y: 100, label: 'PA037' },
+            { y: 100, label: 'PA045' },
+            { y: 100, label: 'PA044' },
+            { y: 100, label: 'PA074' },
+            { y: 100, label: 'PA050' },
+            { y: 100, label: 'PA076' },
+            { y: 100, label: 'PA077' },
+            { y: 100, label: 'PA007' },
+            { y: 100, label: 'PA078' },
+            { y: 100, label: 'PA075' },
+            { y: 100, label: 'PA033' },
+            { y: 100, label: 'PA084' },
+            { y: 100, label: 'PA085' },
+            { y: 100, label: 'PA088' },
+            { y: 100, label: 'PA034' },
+            { y: 100, label: 'PA027' },
+            { y: 100, label: 'PA086' }
           ]
         }
       ],
       title:{
-            text: "Tasks Completed",
+            text: "RISE WA Pavers",
             fontSize: "22"
           },
       creditText: "",
-      legend: {
-        fontFamily: "Arial",
-        fontSize: 14
+      axisX:{
+       labelFontFamily: "Arial",
+       labelFontColor: "black",
+       labelFontSize: 12,
+       labelAngle: -90
+      },
+      axisY:{
+       labelFontFamily: "Arial",
+       labelFontColor: "black",
+       labelFontSize: 12
       },
     backgroundColor: "#eae8e8"
   });
-  chartTasksComplete.render();
-
-  // network inspection compliance
-  var chartNetworkInspection = new CanvasJS.Chart("networkInspection", {
-      data: [
-      {
-        type: "line",
-        lineThickness:3,
-        showInLegend: true,
-        name: "% Inspected",
-        dataPoints: [
-        { x: new Date(2013, 07), y: 0 },
-        { x: new Date(2013, 08), y: 0.001 },
-        { x: new Date(2013, 09), y: 0.01 },
-        { x: new Date(2013, 10), y: 0.05 },
-        { x: new Date(2013, 11), y: 0.1 },
-        { x: new Date(2013, 12), y: 0.15 },
-        { x: new Date(2014, 01), y: 0.22 },
-        { x: new Date(2014, 02), y: 0.38 },
-        { x: new Date(2014, 03), y: 0.56 },
-        { x: new Date(2014, 04), y: 0.77 },
-        { x: new Date(2014, 05), y: 0.91 },
-        { x: new Date(2014, 06), y: 0.94 }
-
-        ]
-      },
-      {
-        type: "line",
-        lineThickness:3,
-        showInLegend: true,
-        name: "MCOS Target",
-        dataPoints: [
-        { x: new Date(2013, 07), y: 0.18 },
-        { x: new Date(2013, 08), y: 0.2 },
-        { x: new Date(2013, 09), y: 0.25},
-        { x: new Date(2013, 10), y: 0.35 },
-        { x: new Date(2013, 11), y: 0.42 },
-        { x: new Date(2013, 12), y: 0.5 },
-        { x: new Date(2014, 01), y: 0.58 },
-        { x: new Date(2014, 02), y: 0.67  },
-        { x: new Date(2014, 03), y: 0.78},
-        { x: new Date(2014, 04), y: 0.88 },
-        { x: new Date(2014, 05), y: 0.98 },
-        { x: new Date(2014, 06), y: 1.04 }
-
-        ]
-      },
-      {
-        type: "line",
-        lineThickness:3,
-        showInLegend: true,
-        name: "4 Week Average",
-        dataPoints: [
-        { x: new Date(2013, 07), y: 0.16 },
-        { x: new Date(2013, 08), y: 0.17 },
-        { x: new Date(2013, 09), y: 0.18},
-        { x: new Date(2013, 10), y: 0.19 },
-        { x: new Date(2013, 11), y: 0.20 },
-        { x: new Date(2013, 12), y: 0.23 },
-        { x: new Date(2014, 01), y: 0.261 },
-        { x: new Date(2014, 02), y: 0.289 },
-        { x: new Date(2014, 03), y: 0.3 },
-        { x: new Date(2014, 04), y: 0.31 },
-        { x: new Date(2014, 05), y: 0.32 },
-        { x: new Date(2014, 06), y: 0.33 }
-
-        ]
-      }
-      ],
-      title:{
-        text: "Network Inspection Compliance",
-        fontSize: "22"
-        },
-      legend: {
-        fontFamily: "Arial",
-        fontSize: 14
-        },
-      axisX:{
-         labelFontFamily: "Arial",
-         labelFontColor: "black",
-         labelFontSize: 12
-        },
-      axisY:{
-         labelFontFamily: "Arial",
-         labelFontColor: "black",
-         labelFontSize: 12
-        },
-      creditText: "",
-      backgroundColor: "#eae8e8"
-  });
-  chartNetworkInspection.render();
-
-  // network inspection compliance
-  var chartCreatedVsCompleted = new CanvasJS.Chart("createdVsCompleted", {
-      data: [
-      {
-        type: "line",
-        lineThickness:3,
-        showInLegend: true,
-        name: "Tasks Created Per Month",
-        dataPoints: [
-        { x: new Date(2010, 07), y: 0.1 },
-        { x: new Date(2010, 09), y: 0.5 },
-        { x: new Date(2010, 11), y: 0.3},
-        { x: new Date(2011, 01), y: 0.0 },
-        { x: new Date(2011, 03), y: 0.15 },
-        { x: new Date(2011, 05), y: 0.25 },
-        { x: new Date(2011, 07), y: 0.25 },
-        { x: new Date(2011, 09), y: 0.36  },
-        { x: new Date(2011, 11), y: 0.53 },
-        { x: new Date(2012, 01), y: 0.70 },
-        { x: new Date(2012, 03), y: 0.85 },
-        { x: new Date(2012, 05), y: 0.11 },
-        { x: new Date(2012, 07), y: 0.5 },
-        { x: new Date(2012, 09), y: 0.06 },
-        { x: new Date(2012, 11), y: 0.09},
-        { x: new Date(2013, 01), y: 0.01 },
-        { x: new Date(2013, 03), y: 0.15 },
-        { x: new Date(2013, 05), y: 0.12 },
-        { x: new Date(2013, 07), y: 0.3 },
-        { x: new Date(2013, 09), y: 0.4  },
-        { x: new Date(2013, 11), y: 0.6 },
-        { x: new Date(2014, 01), y: 0.7 },
-        { x: new Date(2014, 03), y: 0.71 },
-        { x: new Date(2014, 05), y: 0.34 }
-
-        ]
-      },
-      {
-        type: "line",
-        lineThickness:3,
-        showInLegend: true,
-        name: "Tasks Completed Per Month",
-        dataPoints: [
-        { x: new Date(2010, 07), y: 0 },
-        { x: new Date(2010, 09), y: 0.001 },
-        { x: new Date(2010, 11), y: 0.01},
-        { x: new Date(2011, 01), y: 0.05 },
-        { x: new Date(2011, 03), y: 0.1 },
-        { x: new Date(2011, 05), y: 0.15 },
-        { x: new Date(2011, 07), y: 0.22 },
-        { x: new Date(2011, 09), y: 0.38  },
-        { x: new Date(2011, 11), y: 0.56 },
-        { x: new Date(2012, 01), y: 0.77 },
-        { x: new Date(2012, 03), y: 0.91 },
-        { x: new Date(2012, 05), y: 0.94 },
-        { x: new Date(2012, 07), y: 0 },
-        { x: new Date(2012, 09), y: 0.001 },
-        { x: new Date(2012, 11), y: 0.01},
-        { x: new Date(2013, 01), y: 0.05 },
-        { x: new Date(2013, 03), y: 0.1 },
-        { x: new Date(2013, 05), y: 0.15 },
-        { x: new Date(2013, 07), y: 0.22 },
-        { x: new Date(2013, 09), y: 0.38  },
-        { x: new Date(2013, 11), y: 0.56 },
-        { x: new Date(2014, 01), y: 0.77 },
-        { x: new Date(2014, 03), y: 0.91 },
-        { x: new Date(2014, 05), y: 0.94 }
-
-        ]
-      },
-      {
-        type: "line",
-        lineThickness:3,
-        showInLegend: true,
-        name: "All Open Tasks",
-        dataPoints: [
-        { x: new Date(2010, 07), y: 0 },
-        { x: new Date(2010, 09), y: 0.4 },
-        { x: new Date(2010, 11), y: 0.35},
-        { x: new Date(2011, 01), y: 0.23 },
-        { x: new Date(2011, 03), y: 0.14 },
-        { x: new Date(2011, 05), y: 0.19 },
-        { x: new Date(2011, 07), y: 0.2 },
-        { x: new Date(2011, 09), y: 0.48  },
-        { x: new Date(2011, 11), y: 0.66 },
-        { x: new Date(2012, 01), y: 0.57 },
-        { x: new Date(2012, 03), y: 0.99 },
-        { x: new Date(2012, 05), y: 0.91 },
-        { x: new Date(2012, 07), y: 0.3 },
-        { x: new Date(2012, 09), y: 0.4 },
-        { x: new Date(2012, 11), y: 0.35},
-        { x: new Date(2013, 01), y: 0.37 },
-        { x: new Date(2013, 03), y: 0.25 },
-        { x: new Date(2013, 05), y: 0.56 },
-        { x: new Date(2013, 07), y: 0.45 },
-        { x: new Date(2013, 09), y: 0.45  },
-        { x: new Date(2013, 11), y: 0.89 },
-        { x: new Date(2014, 01), y: 0.34 },
-        { x: new Date(2014, 03), y: 0.67 },
-        { x: new Date(2014, 05), y: 0.44 }
-
-        ]
-      },
-      {
-        type: "line",
-        lineThickness:3,
-        showInLegend: true,
-        name: "Open Pending Funding Tasks",
-        dataPoints: [
-        { x: new Date(2010, 07), y: 0.3 },
-        { x: new Date(2010, 09), y: 0.01 },
-        { x: new Date(2010, 11), y: 0.2},
-        { x: new Date(2011, 01), y: 0.04 },
-        { x: new Date(2011, 03), y: 0.7},
-        { x: new Date(2011, 05), y: 0.34 },
-        { x: new Date(2011, 07), y: 0.11 },
-        { x: new Date(2011, 09), y: 0.34  },
-        { x: new Date(2011, 11), y: 0.59 },
-        { x: new Date(2012, 01), y: 0.74 },
-        { x: new Date(2012, 03), y: 0.90 },
-        { x: new Date(2012, 05), y: 0.92 },
-        { x: new Date(2012, 07), y: 0.2 },
-        { x: new Date(2012, 09), y: 0.04 },
-        { x: new Date(2012, 11), y: 0.34},
-        { x: new Date(2013, 01), y: 0.08 },
-        { x: new Date(2013, 03), y: 0.11 },
-        { x: new Date(2013, 05), y: 0.14 },
-        { x: new Date(2013, 07), y: 0.29 },
-        { x: new Date(2013, 09), y: 0.33  },
-        { x: new Date(2013, 11), y: 0.55 },
-        { x: new Date(2014, 01), y: 0.72 },
-        { x: new Date(2014, 03), y: 0.98 },
-        { x: new Date(2014, 05), y: 0.92 }
-
-        ]
-      }
-      ],
-      title:{
-          text: "Created Vs Completed Tasks",
-          fontSize: 22
-        },
-      legend: {
-          fontFamily: "Arial",
-          fontSize: 14
-        },
-      axisX:{
-         labelFontFamily: "Arial",
-         labelFontColor: "black",
-         labelFontSize: 12
-        },
-      axisY:{
-         labelFontFamily: "Arial",
-         labelFontColor: "black",
-         labelFontSize: 12
-        },
-    creditText: "",
-    backgroundColor: "#eae8e8"
-  });
-  chartCreatedVsCompleted.render();
-
-
-// work effort per financial year
-var chartWorkEffort = new CanvasJS.Chart("workEffort",
-    {
-        title: {
-            text: "Work Effort Per Financial Year",
-            fontSize: 22
-        },
-        creditText: "",
-        axisX:{
-            interval: 2,
-            titleFontSize: 16,
-            labelFontSize: 14
-            // labelAngle : 30,
-            // valueFormatString: "HHmm'hrs'"
-
-        },
-        axisY: {
-            title: "Work Effort: $Millions",
-            titleFontSize: 16,
-            labelFontSize: 14
-        },
-        legend: {
-            verticalAlign: "bottom",
-            horizontalAlign: "center"
-        },
-        backgroundColor: "#eae8e8",
-
-        data: [{
-            name: "received",
-            showInLegend: true,
-            legendMarkerType: "square",
-            type: "area",
-            color: "rgba(40,175,101,0.6)",
-            markerSize: 0,
-
-            dataPoints: [
-            {x:new Date(2013,0,1,00,00) ,label: "midnight", y: 7  },
-            {x:new Date(2013,0,1,01,00) , y: 8},
-            {x:new Date(2013,0,1,02,00) , y: 5},
-            {x:new Date(2013,0,1,03,00) , y: 7},
-            {x:new Date(2013,0,1,04,00) , y: 6},
-            {x:new Date(2013,0,1,05,00) , y: 8},
-            {x:new Date(2013,0,1,06,00) , y: 12},
-            {x:new Date(2013,0,1,07,00) , y: 24},
-            {x:new Date(2013,0,1,08,00) , y: 36},
-            {x:new Date(2013,0,1,09,00) , y: 35},
-            {x:new Date(2013,0,1,10,00) , y: 37},
-            {x:new Date(2013,0,1,11,00) , y: 29},
-            {x:new Date(2013,0,1,12,00) , y: 34, label: "noon" },
-            {x:new Date(2013,0,1,13,00) , y: 38},
-            {x:new Date(2013,0,1,14,00) , y: 23},
-            {x:new Date(2013,0,1,15,00) , y: 31},
-            {x:new Date(2013,0,1,16,00) , y: 34},
-            {x:new Date(2013,0,1,17,00) , y: 29},
-            {x:new Date(2013,0,1,18,00) , y: 14},
-            {x:new Date(2013,0,1,19,00) , y: 12},
-            {x:new Date(2013,0,1,20,00) , y: 10},
-            {x:new Date(2013,0,1,21,00) , y: 8},
-            {x:new Date(2013,0,1,22,00) , y: 13},
-            {x:new Date(2013,0,1,23,00) , y: 11}
-            ]
-        },
-        {
-            name: "sent",
-            showInLegend: true,
-            legendMarkerType: "square",
-            type: "area",
-            color: "rgba(0,75,141,0.7)",
-            markerSize: 0,
-            label: "",
-            dataPoints: [
-
-            {x:new Date(2013,0,1,00,00) , label: "midnight", y: 12  },
-            {x:new Date(2013,0,1,01,00) , y: 10},
-            {x:new Date(2013,0,1,02,00) , y: 3},
-            {x:new Date(2013,0,1,03,00) , y: 5},
-            {x:new Date(2013,0,1,04,00) , y: 2},
-            {x:new Date(2013,0,1,05,00) , y: 1},
-            {x:new Date(2013,0,1,06,00) , y: 3},
-            {x:new Date(2013,0,1,07,00) , y: 6},
-            {x:new Date(2013,0,1,08,00) , y: 14},
-            {x:new Date(2013,0,1,09,00) , y: 15},
-            {x:new Date(2013,0,1,10,00) , y: 21},
-            {x:new Date(2013,0,1,11,00) , y: 24},
-            {x:new Date(2013,0,1,12,00) , y: 28, label: "noon" },
-            {x:new Date(2013,0,1,13,00) , y: 26},
-            {x:new Date(2013,0,1,14,00) , y: 17},
-            {x:new Date(2013,0,1,15,00) , y: 23},
-            {x:new Date(2013,0,1,16,00) , y: 28},
-            {x:new Date(2013,0,1,17,00) , y: 22},
-            {x:new Date(2013,0,1,18,00) , y: 10},
-            {x:new Date(2013,0,1,19,00) , y: 9},
-            {x:new Date(2013,0,1,20,00) , y: 6},
-            {x:new Date(2013,0,1,21,00) , y: 4},
-            {x:new Date(2013,0,1,22,00) , y: 12},
-            {x:new Date(2013,0,1,23,00) , y: 14}
-            ]
-          }
-        ]
-    });
-
-chartWorkEffort.render();
+  chartRiseWaPavers.render();
 
 </script>

@@ -178,11 +178,8 @@ function toggle_tab_mobile() {
     $('#form-mobile-info').addClass('hidden');
     $('#form-mobile-maint').addClass('hidden');
     $('#form-mobile-stats').removeClass('hidden');
-    chartHazards.render();
-    chartTasksComplete.render();
-    chartNetworkInspection.render();
-    chartCreatedVsCompleted.render();
-    chartWorkEffort.render();
+    chartRinePavers.render();
+    chartRiseWaPavers.render();
   }
 }
 
