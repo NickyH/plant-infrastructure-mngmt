@@ -180,6 +180,7 @@ function toggle_tab_mobile() {
     $('#form-mobile-stats').removeClass('hidden');
     chartRinePavers.render();
     chartRiseWaPavers.render();
+    // $('#mobile-asset-stats-table').DataTable();
   }
 }
 
