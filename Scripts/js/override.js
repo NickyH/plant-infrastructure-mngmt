@@ -184,6 +184,11 @@ function toggle_tab_mobile() {
     chartTonnesLaid.render();
     chartRinePavers.render();
     chartRiseWaPavers.render();
+    $('#mobile-asset-stats-table').dataTable({
+      ordering: false,
+      searching: false,
+      paging: false
+    });
   }
 }
 
