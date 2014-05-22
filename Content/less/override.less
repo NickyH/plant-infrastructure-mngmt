@@ -66,19 +66,19 @@ td {
   z-index: 3;
   border-right: 1px solid darken(@left-bar-colour, 20%);
   .icon {
-    margin-top: 30px;
-    width: 80px;
-    height: 80px;
-    margin-left: 70px;
+    margin-top: 20px;
+    width: 60px;
+    height: 60px;
+    margin-left: 75px;
     margin-right: auto;
     border-radius: 8px;
     background-color: @form-highlight-colour;
     img {
-      width: 80px;
+      width: 60px;
     }
     a:hover {
       img {
-        width: 80px;
+        width: 60px;
         background-color: darken(@form-highlight-colour, 10%);
         border-radius: 8px;
       }
@@ -204,6 +204,37 @@ li.active {
     }
   }
 }
+
+.switch-container {
+    float: left;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: grey;
+    span {
+      color: white;
+      font-size: 16px;
+      margin-left: 30px;
+      margin-top: 10px;
+      line-height: 30px;
+      font-weight: bold;
+    }
+    &.mobile {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+    &.fixed {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      margin-left: 0;
+    }
+    &.current {
+      background-color: #90ce38;
+    }
+  }
 
 #icon-staff {
   cursor: auto;
