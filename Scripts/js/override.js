@@ -178,6 +178,34 @@ function toggle_tab_mobile() {
     $('#form-mobile-info').addClass('hidden');
     $('#form-mobile-maint').addClass('hidden');
     $('#form-mobile-stats').removeClass('hidden');
+    chartUtilisationPerAsset.render();
+    chartIdleTimeRunning.render();
+    chartIdleTimeMin.render();
+    chartTonnesLaid.render();
+    chartRinePavers.render();
+    chartRiseWaPavers.render();
+  }
+}
+
+function toggle_tab_stats() {
+  $('ul.nav-tabs.site-tabs li.active').removeClass('active');
+  $(this).parent('li').addClass('active');
+
+  var tab_name = $(this).attr('id');
+  if (tab_name === 'tab-plant-stats-elec') {
+    $('#form-plant-stats-elec').removeClass('hidden');
+    $('#form-plant-stats-burn').addClass('hidden');
+    $('#form-plant-stats-waste').addClass('hidden');
+  }
+  if (tab_name === 'tab-plant-stats-burn') {
+    $('#form-plant-stats-elec').addClass('hidden');
+    $('#form-plant-stats-burn').removeClass('hidden');
+    $('#form-plant-stats-waste').addClass('hidden');
+  }
+  if (tab_name === 'tab-plant-stats-waste') {
+    $('#form-plant-stats-elec').addClass('hidden');
+    $('#form-plant-stats-burn').addClass('hidden');
+    $('#form-plant-stats-waste').removeClass('hidden');
     chartRinePavers.render();
     chartRiseWaPavers.render();
     // $('#mobile-asset-stats-table').DataTable();

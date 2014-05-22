@@ -263,6 +263,46 @@
                 <div class="row">
 
                   <div class="col-md-10">
+                    <div id="utilisationPerAsset" class="chart large"></div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col-12 dashboard">
+                <div class="row">
+
+                  <div class="col-md-10">
+                    <div id="idleTimeRunning" class="chart large"></div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col-12 dashboard">
+                <div class="row">
+
+                  <div class="col-md-10">
+                    <div id="idleTimeMin" class="chart large"></div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col-12 dashboard">
+                <div class="row">
+
+                  <div class="col-md-10">
+                    <div id="tonnesLaid" class="chart large"></div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col-12 dashboard">
+                <div class="row">
+
+                  <div class="col-md-10">
                     <div id="rinePavers" class="chart large"></div>
                   </div>
 
@@ -488,6 +528,279 @@
 
 <script type="text/javascript">
 
+// utilisationPerAsset chart
+  var chartUtilisationPerAsset = new CanvasJS.Chart("utilisationPerAsset", {
+      data: [
+        {
+          showInLegend: true,
+          legendText: 'PA062',
+          toolTipContent: "{legendText}: {y}%",
+          markerType: 'square',
+          type: "line",
+          dataPoints: [
+            { y: 85, label: '0' },
+            { y: 100, label: '1' },
+            { y: 55, label: '2' },
+            { y: 50, label: '3' },
+            { y: 85, label: '4' }
+          ]
+        },
+        {
+          showInLegend: true,
+          legendText: 'National',
+          toolTipContent: "{legendText}: {y}%",
+          markerType: 'none',
+          type: "line",
+          dataPoints: [
+            { y: 70, label: '0' },
+            { y: 65, label: '1' },
+            { y: 45, label: '2' },
+            { y: 35, label: '3' },
+            { y: 58, label: '4' }
+          ]
+        },
+        {
+          showInLegend: true,
+          legendText: 'NSW',
+          toolTipContent: "{legendText}: {y}%",
+          markerType: 'none',
+          type: "line",
+          dataPoints: [
+            { y: 85, label: '0' },
+            { y: 82, label: '1' },
+            { y: 60, label: '2' },
+            { y: 42, label: '3' },
+            { y: 80, label: '4' }
+          ]
+        },
+        {
+          showInLegend: true,
+          legendText: "Alert level",
+          toolTipContent: "{legendText}: {y}%",
+          markerType: 'circle',
+          type: "line",
+          dataPoints: [
+            { y: 30, label: '0' },
+            { y: 30, label: '1' },
+            { y: 30, label: '2' },
+            { y: 30, label: '3' },
+            { y: 30, label: '4' }
+          ],
+        },
+        {
+          showInLegend: true,
+          legendText: 'Target',
+          toolTipContent: "{legendText}: {y}%",
+          markerType: 'triangle',
+          type: "line",
+          dataPoints: [
+            { y: 100, label: '0' },
+            { y: 100, label: '1' },
+            { y: 100, label: '2' },
+            { y: 100, label: '3' },
+            { y: 100, label: '4' }
+          ]
+        }
+      ],
+      title:{
+            text: "Utilisation of PA062",
+            fontSize: "22"
+          },
+    creditText: "",
+    axisX:{
+       labelFontFamily: "Arial",
+       labelFontColor: "black",
+       labelFontSize: 12,
+       interval: 1
+      },
+    legend: {
+      fontFamily: "arial",
+      fontSize: 12
+    },
+    axisY:{
+       labelFontFamily: "Arial",
+       labelFontColor: "black",
+       labelFontSize: 10
+      },
+    backgroundColor: "#eae8e8"
+  });
+  chartUtilisationPerAsset.render();
+
+  // idle time running chart
+  var chartIdleTimeRunning = new CanvasJS.Chart("idleTimeRunning", {
+      data: [
+        {
+          indexLabelFontSize: '14',
+          indexLabelFontColor: 'white',
+          toolTipContent: "{label}: {y}%",
+          type: "line",
+          dataPoints: [
+            { y: 32, label: '03/10/2013' },
+            { y: 40, label: '10/10/2013' },
+            { y: 53, label: '17/10/2013' },
+            { y: 21, label: '24/10/2013' },
+            { y: 20, label: '31/10/2013' },
+            { y: 18, label: '06/11/2013' },
+            { y: 48, label: '13/11/2013' },
+            { y: 10, label: '20/11/2013' },
+            { y: 20, label: '27/11/2013' },
+            { y: 25, label: '04/12/2013' },
+            { y: 8, label: '11/12/2013' },
+            { y: 0, label: '18/12/2013' },
+            { y: 0, label: '25/12/2013' },
+            { y: 44, label: '01/01/2014' },
+            { y: 44, label: '08/01/2014' },
+            { y: 22, label: '15/01/2014' },
+            { y: 28, label: '22/01/2014' },
+            { y: 10, label: '29/01/2014' },
+            { y: 7, label: '05/02/2014' },
+            { y: 33, label: '12/02/2014' },
+            { y: 8, label: '19/02/2014' },
+            { y: 43, label: '26/02/2014' }
+          ]
+        }
+      ],
+      title:{
+            text: "Idle Time (% of running)",
+            fontSize: "22"
+          },
+    creditText: "",
+    axisX:{
+       labelFontFamily: "Arial",
+       labelFontColor: "black",
+       labelFontSize: 12,
+       labelAngle: -90,
+       interval: 4
+      },
+    axisY:{
+       labelFontFamily: "Arial",
+       labelFontColor: "black",
+       labelFontSize: 10
+      },
+    backgroundColor: "#eae8e8"
+  });
+  chartIdleTimeRunning.render();
+
+  // idle time running chart
+  var chartIdleTimeMin = new CanvasJS.Chart("idleTimeMin", {
+      data: [
+        {
+          indexLabelFontSize: '14',
+          indexLabelFontColor: 'white',
+          toolTipContent: "{label}: {y}%",
+          type: "column",
+          dataPoints: [
+            { y: 32, label: '03/10/2013' },
+            { y: 40, label: '10/10/2013' },
+            { y: 53, label: '17/10/2013' },
+            { y: 21, label: '24/10/2013' },
+            { y: 20, label: '31/10/2013' },
+            { y: 18, label: '06/11/2013' },
+            { y: 48, label: '13/11/2013' },
+            { y: 10, label: '20/11/2013' },
+            { y: 20, label: '27/11/2013' },
+            { y: 25, label: '04/12/2013' },
+            { y: 8, label: '11/12/2013' },
+            { y: 0, label: '18/12/2013' },
+            { y: 0, label: '25/12/2013' },
+            { y: 44, label: '01/01/2014' },
+            { y: 44, label: '08/01/2014' },
+            { y: 22, label: '15/01/2014' },
+            { y: 28, label: '22/01/2014' },
+            { y: 10, label: '29/01/2014' },
+            { y: 7, label: '05/02/2014' },
+            { y: 33, label: '12/02/2014' },
+            { y: 8, label: '19/02/2014' },
+            { y: 43, label: '26/02/2014' }
+          ]
+        },
+        {
+          dataPoints: [
+            { y: 0 }
+          ]
+        }
+      ],
+      title:{
+            text: "Idle Time Min/Shift",
+            fontSize: "22"
+          },
+    creditText: "",
+    axisX:{
+       labelFontFamily: "Arial",
+       labelFontColor: "black",
+       labelFontSize: 12,
+       labelAngle: -90,
+       interval: 4
+      },
+    axisY:{
+       labelFontFamily: "Arial",
+       labelFontColor: "black",
+       labelFontSize: 10
+      },
+    backgroundColor: "#eae8e8"
+  });
+  chartIdleTimeMin.render();
+
+    // tonnes laid chart
+  var chartTonnesLaid = new CanvasJS.Chart("tonnesLaid", {
+      data: [
+        {
+          indexLabelFontSize: '14',
+          indexLabelFontColor: 'white',
+          toolTipContent: "{label}: {y}%",
+          type: "column",
+          dataPoints: [
+            { y: 32, label: '03/10/2013' },
+            { y: 40, label: '10/10/2013' },
+            { y: 53, label: '17/10/2013' },
+            { y: 21, label: '24/10/2013' },
+            { y: 20, label: '31/10/2013' },
+            { y: 18, label: '06/11/2013' },
+            { y: 48, label: '13/11/2013' },
+            { y: 10, label: '20/11/2013' },
+            { y: 20, label: '27/11/2013' },
+            { y: 25, label: '04/12/2013' },
+            { y: 8, label: '11/12/2013' },
+            { y: 0, label: '18/12/2013' },
+            { y: 0, label: '25/12/2013' },
+            { y: 44, label: '01/01/2014' },
+            { y: 44, label: '08/01/2014' },
+            { y: 22, label: '15/01/2014' },
+            { y: 28, label: '22/01/2014' },
+            { y: 10, label: '29/01/2014' },
+            { y: 7, label: '05/02/2014' },
+            { y: 33, label: '12/02/2014' },
+            { y: 8, label: '19/02/2014' },
+            { y: 43, label: '26/02/2014' }
+          ]
+        },
+        {
+          dataPoints: [
+            { y: 0 }
+          ]
+        }
+      ],
+      title:{
+            text: "Tonnes Laid (target vs actual)",
+            fontSize: "22"
+          },
+    creditText: "",
+    axisX:{
+       labelFontFamily: "Arial",
+       labelFontColor: "black",
+       labelFontSize: 12,
+       labelAngle: -90,
+       interval: 4
+      },
+    axisY:{
+       labelFontFamily: "Arial",
+       labelFontColor: "black",
+       labelFontSize: 10
+      },
+    backgroundColor: "#eae8e8"
+  });
+  chartTonnesLaid.render();
+
 // hazards found chart
   var chartRinePavers = new CanvasJS.Chart("rinePavers", {
       data: [
@@ -557,7 +870,8 @@
        labelFontFamily: "Arial",
        labelFontColor: "black",
        labelFontSize: 12,
-       labelAngle: -90
+       labelAngle: -90,
+       interval: 1
       },
     axisY:{
        labelFontFamily: "Arial",
@@ -637,7 +951,8 @@
        labelFontFamily: "Arial",
        labelFontColor: "black",
        labelFontSize: 12,
-       labelAngle: -90
+       labelAngle: -90,
+       interval: 1
       },
       axisY:{
        labelFontFamily: "Arial",
