@@ -10,19 +10,54 @@ $(function(){
     //     orientation: 'right',
     //     mode: 'overlay'
     // })
-  insert_filter_list();
+  insert_filter_list_fixed();
 });
 
-function insert_filter_list() {
+function switch_mobile_fixed() {
+  if ($(this).hasClass('current')) {
+    return;
+  }
+  else {
+    $('.switch-container').removeClass('current');
+    $(this).addClass('current');
+    var asset_type = $('.current span').text();
+    show_asset_map(asset_type);
+  }
+}
+
+function show_asset_map(asset) {
+  if (asset === 'Mobile' ) {
+    insert_map_mobile();
+  }
+  else {
+    insert_map_fixed();
+  }
+}
+
+function insert_map_mobile() {
+  insert_filter_list_mobile()
+}
+
+function insert_map_fixed() {
+  insert_filter_list_fixed()
+}
+
+function insert_filter_list_fixed() {
   $('#insert-filter-list').empty();
-  $.get('map_filters.html', function(data) {
+  $.get('map_filters_fixed.html', function(data) {
+    $('#insert-filter-list').html(data);
+  });
+}
+
+function insert_filter_list_mobile() {
+  $('#insert-filter-list').empty();
+  $.get('map_filters_mobile.html', function(data) {
     $('#insert-filter-list').html(data);
   });
 }
 
 function open_notify_dialog() {
   // bootbox.alert('Burner fuel consumption below theoretical minimum.');
-
   bootbox.dialog({
   message: "Burner fuel consumption below theoretical minimum",
   title: "Drum Burner Alert",
@@ -44,7 +79,6 @@ function open_notify_dialog() {
 
 function open_expire_dialog() {
   // bootbox.alert('Burner fuel consumption below theoretical minimum.');
-
   bootbox.dialog({
   message: "This document is due to expire within three months",
   title: "Document expiring soon",

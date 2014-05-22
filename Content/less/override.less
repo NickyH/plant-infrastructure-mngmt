@@ -214,6 +214,8 @@ li.active {
     height: 30px;
     border-radius: 30px;
     background-color: grey;
+    border: 1px solid grey;
+    cursor: pointer;
     span {
       color: white;
       font-size: 16px;
@@ -233,8 +235,18 @@ li.active {
     }
     &.current {
       background-color: #90ce38;
+      border: 1px solid white;
+      cursor: default;
     }
   }
+
+.switch-container:not(.current):hover {
+  background-color: darken(#90ce38, 10%);
+}
+
+.switch-container:not(.current):active {
+  background-color: darken(#90ce38, 15%);
+}
 
 #icon-staff {
   cursor: auto;

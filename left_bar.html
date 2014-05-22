@@ -4,15 +4,11 @@
   <div class="icon"><a href="index.html"><img src="../Content/images/icon-globe-white.png"></a></div>
 
   <div class='switch-container mobile'>
-    <span>
-      Mobile
-    </span>
+    <span>Mobile</span>
   </div>
 
   <div class='switch-container fixed current'>
-    <span>
-      Fixed
-    </span>
+    <span>Fixed</span>
   </div>
 
   <div id="menu-tree">
@@ -308,6 +304,8 @@
 
   <script>
   $(function(){ $('#accordion-menu').dcAccordion(); });
+
+  $('.switch-container').on('click', switch_mobile_fixed );
   </script>
 
 </div>

@@ -1,0 +1,68 @@
+<div class="map-container">
+  <div id="map-canvas"></div>
+<!-- <a id="slidepanel-link" href="bottom_bar.html" data-slidepanel="panel"><span>show asset list</span></a> -->
+<!-- <div id="insert-filter-list"></div> -->
+</div>
+
+    <script type="text/javascript">
+
+    var plants = [
+          ['Albany',-34.963,117.854,'Asphalt', 'Bitumen/Emulsion', 'Show All'],
+          ['Archerfield',-27.565,153.019,'Asphalt', 'Bitumen/Emulsion','Workshop','Office', 'Show All'],
+          ['Bathurst',-33.426,149.608,'Asphalt', 'Bitumen/Emulsion', 'Show All'],
+          ['Bayswater',-37.84,145.277,'Asphalt', 'Bitumen/Emulsion','Office', 'Show All'],
+          ['Bli Bli',-26.613,152.978,'Asphalt', 'Bitumen/Emulsion','Office', 'Show All'],
+          ['Cannington',-32.023,115.949, 'Emulsion', 'Show All'],
+          ['Darwin',-12.464235,130.943835,'Asphalt', 'Bitumen/Emulsion','Workshop','Office', 'Show All'],
+          ['Geraldton',-28.804,114.671,'Asphalt', 'Bitumen/Emulsion','Workshop','Office', 'Show All'],
+          ['Gosnells',-32.065,116.021,'Asphalt', 'Bitumen/Emulsion','Office', 'Show All'],
+          ['Gympie',-26.227,152.691,'Asphalt', 'Bitumen/Emulsion', 'Show All'],
+          ['Hobart',-42.76606,147.246441,'Asphalt', 'Bitumen/Emulsion', 'Show All'],
+          ['Hume',-35.389,149.169,'Asphalt', 'Bitumen/Emulsion','Workshop','Office', 'Show All'],
+          ['Invermay',-41.426,147.133, 'Emulsion', 'Show All'],
+          ['Karratha',-20.74,116.801,'Asphalt', 'Bitumen/Emulsion', 'Show All'],
+          ['Largs Bay',-34.825,138.496, 'Emulsion', 'Show All'],
+          ['Mogo',-35.815,150.124,'Asphalt', 'Bitumen/Emulsion', 'Workshop', 'Show All'],
+          ['Mowbray (Launceston)',-41.399,147.162,'Asphalt', 'Bitumen/Emulsion', 'Show All'],
+          ['Narrandera',-34.726,146.57, 'Bitumen/Emulsion', 'Show All'],
+          ['North Ryde',-33.797792,151.119679,'Office', 'Show All'],
+          ['Pakenham',-38.062,145.463, 'Emulsion','Office', 'Show All'],
+          ['Port Melbourne',-37.823701,144.911808,'Office', 'Show All'],
+          ['Rosehill',-33.828,151.023,'Asphalt', 'Bitumen/Emulsion','Workshop','Office', 'Show All'],
+          ['Shepparton',-36.364,145.425,'Asphalt', 'Bitumen/Emulsion', 'Show All'],
+          ['Somerton',-37.642,144.942,'Asphalt', 'Bitumen/Emulsion','Workshop','Office', 'Show All'],
+          ['St Kilda Road',-37.841212,144.976702,'Office', 'Show All'],
+          ['Strathpine',-27.315,152.994,'Asphalt', 'Bitumen/Emulsion', 'Workshop', 'Show All'],
+          ['Tamworth',-31.078,150.851,'Asphalt', 'Bitumen/Emulsion','Workshop','Office', 'Show All'],
+          ['Teralba',-32.957,151.59,'Asphalt', 'Bitumen/Emulsion','Workshop','Office', 'Show All'],
+          ['Wingfield',-34.848973,138.572794,'Asphalt', 'Bitumen/Emulsion','Workshop','Office', 'Show All'],
+          ['Wodonga',-36.105,146.853,'Asphalt', 'Bitumen/Emulsion','Workshop','Office', 'Show All'],
+          ['Woolongabba',-27.495,153.033,'Office', 'Show All']
+        ];
+
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-28.000, 140.000),
+          zoom: 5
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+
+        var image = {
+          url: '../Content/images/plant-red.png',
+          size: new google.maps.Size( 30, 30 )
+        };
+
+        for (var i = 0; i < plants.length; i++) {
+         var marker = new google.maps.Marker({
+             position: new google.maps.LatLng(plants[i][1], plants[i][2]),
+             map: map,
+             icon: image,
+             title: plants[i][0]
+           });
+         }
+
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
