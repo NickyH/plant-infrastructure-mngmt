@@ -22,7 +22,7 @@
 
           <div class="form-panel full-width tab-panel">
 
-            <!--start mobileinfo tab-->
+            <!--start elec tab-->
             <div class="tab-panel" id="form-plant-stats-elec">
 
               <!-- form panel 1 -->
@@ -79,9 +79,9 @@
               <!-- end form panel 2 -->
 
             </div>
-            <!--end mobileinfo tab-->
+            <!--end elec tab-->
 
-            <!--start mobilemaint tab-->
+            <!--start burner tab-->
             <div class="tab-panel hidden" id="form-plant-stats-burn">
 
               <!-- form panel 1 -->
@@ -254,16 +254,16 @@
               <!-- end form panel 2 -->
 
             </div>
-            <!--end mobilemaint tab-->
+            <!--end burner tab-->
 
-            <!--start mobilestats tab-->
+            <!--start waste tab-->
             <div class="tab-panel hidden" id="form-plant-stats-waste">
 
               <div class="col-12 dashboard">
                 <div class="row">
 
                   <div class="col-md-10">
-                    <div id="rinePavers" class="chart large"></div>
+                    <div id="wasteByCategory" class="chart large"></div>
                   </div>
 
                 </div>
@@ -272,203 +272,189 @@
               <div class="col-12 dashboard">
                 <div class="row">
 
-                  <div class="col-md-10">
-                    <div id="riseWaPavers" class="chart large"></div>
+                  <div class="col-md-6">
+
+                    <table id="plant-stats-waste-ranking" class="table table-condensed">
+                      <thead>
+                        <tr>
+                          <th>Category</th>
+                          <th>MTD</th>
+                          <th>YTD</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="ranking">
+                          <td class="text bold">Category 1</td>
+                          <td>34%</td>
+                          <td class="ytd">38%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 2</td>
+                          <td>44%</td>
+                          <td class="ytd">41%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 3</td>
+                          <td>52%</td>
+                          <td class="ytd">56%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 4</td>
+                          <td>28%</td>
+                          <td class="ytd">90%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 5</td>
+                          <td>34%</td>
+                          <td class="ytd">38%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 6</td>
+                          <td>34%</td>
+                          <td class="ytd">85%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 7</td>
+                          <td>44%</td>
+                          <td class="ytd">41%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 8</td>
+                          <td>52%</td>
+                          <td class="ytd">56%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 9</td>
+                          <td>28%</td>
+                          <td class="ytd">38%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 10</td>
+                          <td>34%</td>
+                          <td class="ytd">38%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 20</td>
+                          <td>34%</td>
+                          <td class="ytd">38%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 21</td>
+                          <td>44%</td>
+                          <td class="ytd">41%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 22</td>
+                          <td>51%</td>
+                          <td class="ytd">54%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 23</td>
+                          <td>26%</td>
+                          <td class="ytd">32%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 24</td>
+                          <td>31%</td>
+                          <td class="ytd">37%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 25</td>
+                          <td>33%</td>
+                          <td class="ytd">80%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 26</td>
+                          <td>39%</td>
+                          <td class="ytd">44%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 27</td>
+                          <td>52%</td>
+                          <td class="ytd">75%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 28</td>
+                          <td>48%</td>
+                          <td class="ytd">37%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 29</td>
+                          <td>54%</td>
+                          <td class="ytd">32%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  </div>
+
+                  <div class="col-md-6">
+
+                    <!-- form panel 2 -->
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+
+                      <div class="form-panel">
+
+                        <form class="form-horizontal container">
+
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label"></label>
+                            <label class="col-sm-8">Waste Events</label>
+                          </div>
+
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label">Event</label>
+                            <div class="col-sm-8">
+                              <textarea class="form-control" rows="4"></textarea>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label">Event Category</label>
+                            <div class="col-sm-8">
+                              <select class="selectpicker show-tick form-control" title=''>
+                                <option data-hidden="true"></option>
+                                <option>Maintenance</option>
+                                <option>New Work</option>
+                                <option>Safety/Enviro</option>
+                                <option>General</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label">Date</label>
+                            <div class="col-sm-8">
+                              <div class="input-group merged">
+                                <input type="text" class="form-control date datepicker" />
+                                <span class="input-group-addon">
+                                  <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label"></label>
+                            <label class="col-sm-4 control-label"></label>
+                            <div class="col-sm-4">
+                              <span class='btn btn-info attachment'>Add Event</span>
+                            </div>
+                          </div>
+
+                        </form>
+
+                      </div>
+                    </div>
+                    <!-- end form panel 2 -->
+
                   </div>
 
                 </div>
               </div>
 
-                <table id="mobile-asset-stats-table" class="table table-condensed">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th colspan="4" class="centre">Average Utilisation %</th>
-                    </tr>
-                    <tr>
-                      <th class="border-right"></th>
-                      <th>Nov</th>
-                      <th>Dec</th>
-                      <th>Jan</th>
-                      <th>Feb</th>
-                    </tr>
-                  </thead>
-
-                  <tbody>
-                      <tr class="row-highlight">
-                        <td class="text bold white border-right">RISE</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Stabilisers - 8 units</td>
-                        <td>73%</td>
-                        <td>81%</td>
-                        <td>51%</td>
-                        <td>63%</td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Pavers - 15 units</td>
-                        <td>74%</td>
-                        <td>98%</td>
-                        <td>57%</td>
-                        <td>69%</td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Sprayers - 13 units</td>
-                        <td>85%</td>
-                        <td>112%</td>
-                        <td>66%</td>
-                        <td>82%</td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Profilers - 6 units</td>
-                        <td>55%</td>
-                        <td>63%</td>
-                        <td>38%</td>
-                        <td>41%</td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Graders - 15 units</td>
-                        <td>95%</td>
-                        <td>124%</td>
-                        <td>81%</td>
-                        <td>104%</td>
-                      </tr>
-                      <tr class="row-highlight">
-                        <td class="text bold white border-right">WA</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Stabilisers - 7 units</td>
-                        <td>40%</td>
-                        <td>61%</td>
-                        <td>50%</td>
-                        <td>65%</td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Pavers - 6 units</td>
-                        <td>70%</td>
-                        <td>98%</td>
-                        <td>85%</td>
-                        <td>104%</td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Sprayers - 4 units</td>
-                        <td>82%</td>
-                        <td>124%</td>
-                        <td>101%</td>
-                        <td>123%</td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Profilers - 6 units</td>
-                        <td>32%</td>
-                        <td>42%</td>
-                        <td>44%</td>
-                        <td>66%</td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Graders</td>
-                        <td>0%</td>
-                        <td>0%</td>
-                        <td>0%</td>
-                        <td></td>
-                      </tr>
-                      <tr class="row-highlight">
-                        <td class="text bold white border-right">RINE</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Stabilisers - 15 units</td>
-                        <td>155%</td>
-                        <td>196%</td>
-                        <td>85%</td>
-                        <td>113%</td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Pavers - 20 units</td>
-                        <td>176%</td>
-                        <td>234%</td>
-                        <td>94%</td>
-                        <td>118%</td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Sprayers - 13 units</td>
-                        <td>146%</td>
-                        <td>200%</td>
-                        <td>96%</td>
-                        <td>113%</td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Profilers - 5 units</td>
-                        <td>169%</td>
-                        <td>231%</td>
-                        <td>95%</td>
-                        <td>104%</td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Graders - 15 units</td>
-                        <td>NA</td>
-                        <td>NA</td>
-                        <td>NA</td>
-                        <td>NA</td>
-                      </tr>
-                      <tr class="row-highlight">
-                        <td class="text bold white border-right">Total</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Stabilisers - 30 units</td>
-                        <td>89%</td>
-                        <td>113%</td>
-                        <td>62%</td>
-                        <td>80%</td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Pavers - 41 units</td>
-                        <td>107%</td>
-                        <td>143%</td>
-                        <td>79%</td>
-                        <td>97%</td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Sprayers - 30 units</td>
-                        <td>104%</td>
-                        <td>145%</td>
-                        <td>88%</td>
-                        <td>106%</td>
-                      </tr>
-                      <tr>
-                        <td class="text bold border-right">Profilers - 19 units</td>
-                        <td>85%</td>
-                        <td>112%</td>
-                        <td>59%</td>
-                        <td>70%</td>
-                      </tr>
-                      <tr>
-                        <td class="text bold">Graders - 15 units</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-
-                  </tbody>
-              </table>
-
             </div>
-            <!--end mobilestats tab-->
+            <!--end waste tab-->
 
           </div>
           <!-- end form panel 1-->
@@ -485,71 +471,70 @@
   $('ul.nav-tabs.site-tabs li a').on('click', toggle_tab_stats);
 </script>
 
-
 <script type="text/javascript">
 
-// hazards found chart
-  var chartRinePavers = new CanvasJS.Chart("rinePavers", {
+// waste by category chart
+  var chartWasteByCategory = new CanvasJS.Chart("wasteByCategory", {
       data: [
         {
           indexLabelFontSize: '14',
           indexLabelFontColor: 'white',
           toolTipContent: "{label}: {y}%",
-          type: "column",
+          type: "area",
           dataPoints: [
-            { y: 65,label: 'PA056' },
-            { y: 75, label: 'PA066' },
-            { y: 0, label: 'PA021' },
-            { y: 75, label: 'PA072' },
-            { y: 95, label: 'PA082' },
-            { y: 95, label: 'PA087' },
-            { y: 100, label: 'PA089' },
-            { y: 0, label: 'PA020' },
-            { y: 50, label: 'PA040' },
-            { y: 60, label: 'PA016' },
-            { y: 85, label: 'PA062' },
-            { y: 120, label: 'PA061' },
-            { y: 90, label: 'PA090' },
-            { y: 0, label: 'PA057' },
-            { y: 85, label: 'PA059' },
-            { y: 90, label: 'PA079' },
-            { y: 120, label: 'PA080' },
-            { y: 90, label: 'PA081' },
-            { y: 0, label: 'PA028' },
-            { y: 50, label: 'PA039' }
+            { y: 65 },
+            { y: 75 },
+            { y: 0 },
+            { y: 75 },
+            { y: 95 },
+            { y: 95 },
+            { y: 100 },
+            { y: 0 },
+            { y: 50 },
+            { y: 60 },
+            { y: 85 },
+            { y: 120 },
+            { y: 90 },
+            { y: 0 },
+            { y: 85 },
+            { y: 90 },
+            { y: 120 },
+            { y: 90 },
+            { y: 0 },
+            { y: 50 }
           ]
         },
         {
           indexLabelFontSize: '14',
           indexLabelFontColor: 'white',
           toolTipContent: "target 100%",
-          type: "line",
+          type: "area",
           dataPoints: [
-            { y: 100,label: 'PA056' },
-            { y: 100, label: 'PA066' },
-            { y: 100, label: 'PA021' },
-            { y: 100, label: 'PA072' },
-            { y: 100, label: 'PA082' },
-            { y: 100, label: 'PA087' },
-            { y: 100, label: 'PA089' },
-            { y: 100, label: 'PA020' },
-            { y: 100, label: 'PA040' },
-            { y: 100, label: 'PA016' },
-            { y: 100, label: 'PA062' },
-            { y: 100, label: 'PA061' },
-            { y: 100, label: 'PA090' },
-            { y: 100, label: 'PA057' },
-            { y: 100, label: 'PA059' },
-            { y: 100, label: 'PA079' },
-            { y: 100, label: 'PA080' },
-            { y: 100, label: 'PA081' },
-            { y: 100, label: 'PA028' },
-            { y: 100, label: 'PA039' }
+            { y: 65 },
+            { y: 40 },
+            { y: 80 },
+            { y: 56 },
+            { y: 65 },
+            { y: 78 },
+            { y: 45 },
+            { y: 54 },
+            { y: 33 },
+            { y: 26 },
+            { y: 89 },
+            { y: 25 },
+            { y: 67 },
+            { y: 78 },
+            { y: 79 },
+            { y: 57 },
+            { y: 90 },
+            { y: 78 },
+            { y: 49 },
+            { y: 50 }
           ]
         }
       ],
       title:{
-            text: "RINE Pavers",
+            text: "Waste By Category",
             fontSize: "22"
           },
     creditText: "",
@@ -567,87 +552,6 @@
       },
     backgroundColor: "#eae8e8"
   });
-  chartRinePavers.render();
-
-// tasks completed chart
-  var chartRiseWaPavers = new CanvasJS.Chart("riseWaPavers", {
-      data: [
-        {
-          toolTipContent: "{label}: {y}%",
-          type: "column",
-          dataPoints: [
-            { y: 22,label: 'PA018' },
-            { y: 0, label: 'PA022' },
-            { y: 80, label: 'PA073' },
-            { y: 100, label: 'PA083' },
-            { y: 0, label: 'PA037' },
-            { y: 0, label: 'PA045' },
-            { y: 35, label: 'PA044' },
-            { y: 15, label: 'PA074' },
-            { y: 50, label: 'PA050' },
-            { y: 0, label: 'PA076' },
-            { y: 115, label: 'PA077' },
-            { y: 60, label: 'PA007' },
-            { y: 0, label: 'PA078' },
-            { y: 80, label: 'PA075' },
-            { y: 65, label: 'PA033' },
-            { y: 0, label: 'PA084' },
-            { y: 100, label: 'PA085' },
-            { y: 100, label: 'PA088' },
-            { y: 75, label: 'PA034' },
-            { y: 30, label: 'PA027' },
-            { y: 55, label: 'PA086' }
-          ]
-        },
-        {
-          indexLabelFontSize: '14',
-          indexLabelFontColor: 'white',
-          toolTipContent: "target 100%",
-          type: "line",
-          dataPoints: [
-            { y: 100,label: 'PA018' },
-            { y: 100, label: 'PA022' },
-            { y: 100, label: 'PA073' },
-            { y: 100, label: 'PA083' },
-            { y: 100, label: 'PA037' },
-            { y: 100, label: 'PA045' },
-            { y: 100, label: 'PA044' },
-            { y: 100, label: 'PA074' },
-            { y: 100, label: 'PA050' },
-            { y: 100, label: 'PA076' },
-            { y: 100, label: 'PA077' },
-            { y: 100, label: 'PA007' },
-            { y: 100, label: 'PA078' },
-            { y: 100, label: 'PA075' },
-            { y: 100, label: 'PA033' },
-            { y: 100, label: 'PA084' },
-            { y: 100, label: 'PA085' },
-            { y: 100, label: 'PA088' },
-            { y: 100, label: 'PA034' },
-            { y: 100, label: 'PA027' },
-            { y: 100, label: 'PA086' }
-          ]
-        }
-      ],
-      title:{
-            text: "RISE WA Pavers",
-            fontSize: "22"
-          },
-      creditText: "",
-      axisX:{
-       labelFontFamily: "Arial",
-       labelFontColor: "black",
-       labelFontSize: 12,
-       labelAngle: -90,
-       interval: 1
-      },
-      axisY:{
-       labelFontFamily: "Arial",
-       labelFontColor: "black",
-       labelFontSize: 12
-      },
-    backgroundColor: "#eae8e8"
-  });
-  chartRiseWaPavers.render();
+  chartWasteByCategory.render();
 
 </script>

@@ -206,10 +206,28 @@ function toggle_tab_stats() {
     $('#form-plant-stats-elec').addClass('hidden');
     $('#form-plant-stats-burn').addClass('hidden');
     $('#form-plant-stats-waste').removeClass('hidden');
-    chartRinePavers.render();
-    chartRiseWaPavers.render();
-    // $('#mobile-asset-stats-table').DataTable();
+    chartWasteByCategory.render();
+    $('#plant-stats-waste-ranking').dataTable({
+      searching: false,
+      paging: false,
+    });
+    rankings_table_colour();
   }
+}
+
+function rankings_table_colour() {
+  var ytd = $('table td.ytd');
+  $(ytd).each(function() {
+    if (parseInt($(this).text().replace('%', '')) >= 75 ) {
+      $(this).parent('tr.ranking').addClass('green');
+    }
+    if (parseInt($(this).text().replace('%', '')) < 75 && parseInt($(this).text().replace('%', '')) >= 45 ) {
+      $(this).parent('tr.ranking').addClass('orange');
+    }
+    if (parseInt($(this).text().replace('%', '')) < 45 ) {
+      $(this).parent('tr.ranking').addClass('red');
+    }
+  });
 }
 
 function toggle_rw_select() {
