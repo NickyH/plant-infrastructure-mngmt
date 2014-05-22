@@ -470,6 +470,12 @@
 
 <script>
   $('ul.nav-tabs.site-tabs li a').on('click', toggle_tab_stats);
+
+  $('#plant-stats-waste-ranking').dataTable({
+    searching: false,
+    paging: false,
+  });
+
 </script>
 
 <script type="text/javascript">
@@ -478,10 +484,14 @@
   var chartWasteByCategory = new CanvasJS.Chart("wasteByCategory", {
       data: [
         {
+          showInLegend: true,
           indexLabelFontSize: '14',
           indexLabelFontColor: 'white',
           toolTipContent: "{label}: {y}%",
-          type: "area",
+          type: "stackedArea",
+          color: "rgba(60,84,151,.9)",
+          markerSize: 0,
+          legendMarkerType: 'square',
           dataPoints: [
             { y: 65 },
             { y: 75 },
@@ -506,10 +516,14 @@
           ]
         },
         {
+          showInLegend: true,
           indexLabelFontSize: '14',
           indexLabelFontColor: 'white',
           toolTipContent: "target 100%",
-          type: "area",
+          type: "stackedArea",
+          color: "rgba(22,115,211,.9)",
+          markerSize: 0,
+          legendMarkerType: 'square',
           dataPoints: [
             { y: 65 },
             { y: 40 },

@@ -184,11 +184,6 @@ function toggle_tab_mobile() {
     chartTonnesLaid.render();
     chartRinePavers.render();
     chartRiseWaPavers.render();
-    $('#mobile-asset-stats-table').dataTable({
-      ordering: false,
-      searching: false,
-      paging: false
-    });
   }
 }
 
@@ -212,10 +207,6 @@ function toggle_tab_stats() {
     $('#form-plant-stats-burn').addClass('hidden');
     $('#form-plant-stats-waste').removeClass('hidden');
     chartWasteByCategory.render();
-    $('#plant-stats-waste-ranking').dataTable({
-      searching: false,
-      paging: false,
-    });
     rankings_table_colour();
   }
 }
