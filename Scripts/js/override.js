@@ -6,10 +6,6 @@ $(function(){
         orientation: 'bottom',
         mode: 'overlay'
     })
-    // $('[data-slidepanel]').slidepanel({
-    //     orientation: 'right',
-    //     mode: 'overlay'
-    // })
   insert_filter_list_fixed();
 });
 
@@ -36,22 +32,72 @@ function show_asset_map(asset) {
 
 function insert_map_mobile() {
   insert_filter_list_mobile()
+  insert_markers_mobile();
 }
 
-function insert_map_fixed() {
-  insert_filter_list_fixed()
-}
+function insert_markers_mobile() {
+  var mapOptions = {
+    center: new google.maps.LatLng(-28.000, 140.000),
+    zoom: 5
+  };
 
-function insert_filter_list_fixed() {
-  $('#insert-filter-list').empty();
-  $.get('map_filters_fixed.html', function(data) {
-    $('#insert-filter-list').html(data);
-  });
+  var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+  var image = {
+    url: '../Content/images/plant-red.png',
+    size: new google.maps.Size( 30, 30 )
+  };
+
+  for (var i = 0; i < mobile.length; i++) {
+    var marker = new google.maps.Marker({
+       position: new google.maps.LatLng(mobile[i][1], mobile[i][2]),
+       map: map,
+       icon: image,
+       title: mobile[i][0]
+     });
+    }
+  google.maps.event.addDomListener(window, 'load', initialize);
 }
 
 function insert_filter_list_mobile() {
   $('#insert-filter-list').empty();
   $.get('map_filters_mobile.html', function(data) {
+    $('#insert-filter-list').html(data);
+  });
+}
+
+function insert_map_fixed() {
+  insert_filter_list_fixed()
+  insert_markers_fixed();
+}
+
+function insert_markers_fixed() {
+  var mapOptions = {
+    center: new google.maps.LatLng(-28.000, 140.000),
+    zoom: 5
+  };
+
+  var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+  var image = {
+    url: '../Content/images/plant-red.png',
+    size: new google.maps.Size( 30, 30 )
+  };
+
+  for (var i = 0; i < mobile.length; i++) {
+    var marker = new google.maps.Marker({
+       position: new google.maps.LatLng(plants[i][1], plants[i][2]),
+       map: map,
+       icon: image,
+       title: plants[i][0]
+     });
+    }
+  google.maps.event.addDomListener(window, 'load', initialize);
+}
+
+function insert_filter_list_fixed() {
+  $('#insert-filter-list').empty();
+  $.get('map_filters_fixed.html', function(data) {
     $('#insert-filter-list').html(data);
   });
 }
@@ -289,45 +335,45 @@ function toggle_rw_select() {
 }
 
 function filter_map_markers() {
-    var markers_array = [];
-    $('.pill-select:not(.inactive)').each(function() {
-    markers_array.push( $(this).children('.filter-text').text() );
-    });
+  var markers_array = [];
+  $('.pill-select:not(.inactive)').each(function() {
+  markers_array.push( $(this).children('.filter-text').text() );
+  });
 
-    redraw_map_markers(markers_array);
+  redraw_map_markers(markers_array);
 }
 
 function redraw_map_markers(markers_array) {
-    var mapOptions = {
-          center: new google.maps.LatLng(-28.000, 140.000),
-          zoom: 5
-        };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
-            mapOptions);
+  var mapOptions = {
+    center: new google.maps.LatLng(-28.000, 140.000),
+    zoom: 5
+  };
+  var map = new google.maps.Map(document.getElementById("map-canvas"),
+      mapOptions);
 
-        var image = {
-          url: '../Content/images/plant-red.png',
-          size: new google.maps.Size( 30, 30 )
-        };
+  var image = {
+    url: '../Content/images/plant-red.png',
+    size: new google.maps.Size( 30, 30 )
+  };
 
-        var plants_filtered = [];
+  var plants_filtered = [];
 
-        for (var i = 0; i < plants.length; i++) {
-            for (var j = 0; j < markers_array.length; j++) {
-                if (markers_array[j] === plants[i][3] || markers_array[j] === plants[i][4] || markers_array[j] === plants[i][5] || markers_array[j] === plants[i][6] || markers_array[j] === plants[i][7] ) {
-                    plants_filtered.push(plants[i]);
-                    }
-                }
-            }
+  for (var i = 0; i < plants.length; i++) {
+    for (var j = 0; j < markers_array.length; j++) {
+      if (markers_array[j] === plants[i][3] || markers_array[j] === plants[i][4] || markers_array[j] === plants[i][5] || markers_array[j] === plants[i][6] || markers_array[j] === plants[i][7] ) {
+        plants_filtered.push(plants[i]);
+      }
+    }
+  }
 
-            for (var i = 0; i < plants_filtered.length; i++) {
-             var marker = new google.maps.Marker({
-                 position: new google.maps.LatLng(plants_filtered[i][1], plants_filtered[i][2]),
-                 map: map,
-                 icon: image,
-                 title: plants_filtered[i][0]
-               });
-             }
+  for (var i = 0; i < plants_filtered.length; i++) {
+   var marker = new google.maps.Marker({
+     position: new google.maps.LatLng(plants_filtered[i][1], plants_filtered[i][2]),
+     map: map,
+     icon: image,
+     title: plants_filtered[i][0]
+   });
+  }
 }
 
 function show_map_qtip() {
