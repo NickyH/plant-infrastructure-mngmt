@@ -25,58 +25,200 @@
             <!--start elec tab-->
             <div class="tab-panel" id="form-plant-stats-elec">
 
-              <!-- form panel 1 -->
-              <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="col-12 dashboard">
+                <div class="row">
 
-                <div class="form-panel">
-                  <div class="asset-image"><img src="../Content/images/mobile_plant1.jpg"></div>
+                  <div class="col-md-10">
+                    <div id="elecByCategory" class="chart large"></div>
+                  </div>
+
                 </div>
               </div>
-              <!-- end form panel 1 -->
 
-              <!-- form panel 2 -->
-              <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="col-12 dashboard">
+                <div class="row">
 
-                <div class="form-panel">
+                  <div class="col-md-6">
 
-                  <form class="form-horizontal container">
-
-                    <div class="form-group" role="search">
-                      <div class="col-sm-12">
-                        <input id="document-search" type="text" class="form-control search" placeholder="Search">
-                      </div>
-                    </div>
-
-                    <table class="table table-condensed table-striped">
+                    <table id="plant-stats-elec-ranking" class="table table-condensed">
                       <thead>
                         <tr>
-                          <th>Document</th>
-                          <th>Uploaded</th>
+                          <th>Category</th>
+                          <th>MTD</th>
+                          <th>YTD</th>
                         </tr>
                       </thead>
-                      <tr>
-                        <td><a href="tank_schematic_1.pdf" target="_blank">Tank Schematic</a></td>
-                        <td>15/12/2012</td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">System Schematic</a></td>
-                        <td>05/06/2012</td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">Bitumen Transfer Procedure</a></td>
-                        <td>10/10/2011</td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">Internal Inspection</a></td>
-                        <td>15/12/2012</td>
-                      </tr>
+                      <tbody>
+                        <tr class="ranking">
+                          <td class="text bold">Category 1</td>
+                          <td>34%</td>
+                          <td class="ytd">38%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 2</td>
+                          <td>44%</td>
+                          <td class="ytd">41%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 3</td>
+                          <td>52%</td>
+                          <td class="ytd">56%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 4</td>
+                          <td>28%</td>
+                          <td class="ytd">90%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 5</td>
+                          <td>34%</td>
+                          <td class="ytd">38%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 6</td>
+                          <td>34%</td>
+                          <td class="ytd">85%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 7</td>
+                          <td>44%</td>
+                          <td class="ytd">41%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 8</td>
+                          <td>52%</td>
+                          <td class="ytd">56%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 9</td>
+                          <td>28%</td>
+                          <td class="ytd">38%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 10</td>
+                          <td>34%</td>
+                          <td class="ytd">38%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 20</td>
+                          <td>34%</td>
+                          <td class="ytd">38%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 21</td>
+                          <td>44%</td>
+                          <td class="ytd">41%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 22</td>
+                          <td>51%</td>
+                          <td class="ytd">54%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 23</td>
+                          <td>26%</td>
+                          <td class="ytd">32%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 24</td>
+                          <td>31%</td>
+                          <td class="ytd">37%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 25</td>
+                          <td>33%</td>
+                          <td class="ytd">80%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 26</td>
+                          <td>39%</td>
+                          <td class="ytd">44%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 27</td>
+                          <td>52%</td>
+                          <td class="ytd">75%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 28</td>
+                          <td>48%</td>
+                          <td class="ytd">37%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 29</td>
+                          <td>54%</td>
+                          <td class="ytd">32%</td>
+                        </tr>
+                      </tbody>
                     </table>
 
-                  </form>
+                  </div>
+
+                  <div class="col-md-6">
+
+                    <!-- form panel 2 -->
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+
+                      <div class="form-panel">
+
+                        <form class="form-horizontal container">
+
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label"></label>
+                            <label class="col-sm-8">Electricity Events</label>
+                          </div>
+
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label">Electricity Event</label>
+                            <div class="col-sm-8">
+                              <textarea class="form-control" rows="4"></textarea>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label">Electricity Category</label>
+                            <div class="col-sm-8">
+                              <select class="selectpicker show-tick form-control" title=''>
+                                <option data-hidden="true"></option>
+                                <option>Crew Return</option>
+                                <option>Production Waste</option>
+                                <option>Defective/Plant Issue</option>
+                                <option>Over Order/Produce - Unbilled</option>
+                                <option>Dry Waste</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label">Date</label>
+                            <div class="col-sm-8">
+                              <div class="input-group merged">
+                                <input type="text" class="form-control date datepicker" />
+                                <span class="input-group-addon">
+                                  <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label"></label>
+                            <label class="col-sm-4 control-label"></label>
+                            <div class="col-sm-4">
+                              <span class='btn btn-info attachment'>Add Event</span>
+                            </div>
+                          </div>
+
+                        </form>
+
+                      </div>
+                    </div>
+                    <!-- end form panel 2 -->
+
+                  </div>
 
                 </div>
               </div>
-              <!-- end form panel 2 -->
 
             </div>
             <!--end elec tab-->
@@ -84,174 +226,200 @@
             <!--start burner tab-->
             <div class="tab-panel hidden" id="form-plant-stats-burn">
 
-              <!-- form panel 1 -->
-              <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="col-12 dashboard">
+                <div class="row">
 
-                <div class="form-panel">
-
-                  <form class="form-horizontal container">
-
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Asset ID</label>
-                        <div class="col-sm-8">
-                          <input disabled class="form-control" value="Bitumen Tanks" />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Year Built</label>
-                        <div class="col-sm-8">
-                          <input disabled class="form-control" value="2000" />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Year Installed</label>
-                        <div class="col-sm-8">
-                          <input disabled class="form-control" value="2000" />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Manufacturer</label>
-                        <div class="col-sm-8">
-                          <input disabled class="form-control" value="Ammann" />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Split</label>
-                        <div class="col-sm-8">
-                          <input disabled class="form-control" value="Vertical" />
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Last Insp</label>
-                        <div class="col-sm-8">
-                          <input disabled class="form-control" value="When Installed" />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Last Cleaned</label>
-                        <div class="col-sm-8">
-                          <input disabled class="form-control" value="NA" />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label"></label>
-                        <div class="col-sm-8">
-                          <span class='btn btn-success'>Edit Details</span>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Attachments</label>
-                        <div class="col-sm-8">
-                          <input type="file" class="form-control">
-                          <span class='btn btn-info file-select'>Select File</span>
-                          <span class='btn btn-primary attachment'><span class="glyphicon glyphicon-plus"></span></span>
-                          <span class='btn btn-success attachment'><span class="glyphicon glyphicon-ok"></span></span>
-                          <span class='btn btn-danger attachment'><span class="glyphicon glyphicon-remove"></span></span>
-                        </div>
-                      </div>
-
-                    <span class="glyphicon insert-cross-icon"></span>
-                  </form>
+                  <div class="col-md-10">
+                    <div id="burnerByCategory" class="chart large"></div>
+                  </div>
 
                 </div>
               </div>
-              <!-- end form panel 1 -->
 
-              <!-- form panel 2 -->
-              <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="col-12 dashboard">
+                <div class="row">
 
-                <div class="form-panel">
+                  <div class="col-md-6">
 
-                  <form class="form-horizontal container">
+                    <table id="plant-stats-burner-ranking" class="table table-condensed">
+                      <thead>
+                        <tr>
+                          <th>Category</th>
+                          <th>MTD</th>
+                          <th>YTD</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="ranking">
+                          <td class="text bold">Category 1</td>
+                          <td>34%</td>
+                          <td class="ytd">38%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 2</td>
+                          <td>44%</td>
+                          <td class="ytd">41%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 3</td>
+                          <td>52%</td>
+                          <td class="ytd">56%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 4</td>
+                          <td>28%</td>
+                          <td class="ytd">90%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 5</td>
+                          <td>34%</td>
+                          <td class="ytd">38%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 6</td>
+                          <td>34%</td>
+                          <td class="ytd">85%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 7</td>
+                          <td>44%</td>
+                          <td class="ytd">41%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 8</td>
+                          <td>52%</td>
+                          <td class="ytd">56%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 9</td>
+                          <td>28%</td>
+                          <td class="ytd">38%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 10</td>
+                          <td>34%</td>
+                          <td class="ytd">38%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 20</td>
+                          <td>34%</td>
+                          <td class="ytd">38%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 21</td>
+                          <td>44%</td>
+                          <td class="ytd">41%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 22</td>
+                          <td>51%</td>
+                          <td class="ytd">54%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 23</td>
+                          <td>26%</td>
+                          <td class="ytd">32%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 24</td>
+                          <td>31%</td>
+                          <td class="ytd">37%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 25</td>
+                          <td>33%</td>
+                          <td class="ytd">80%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 26</td>
+                          <td>39%</td>
+                          <td class="ytd">44%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 27</td>
+                          <td>52%</td>
+                          <td class="ytd">75%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 28</td>
+                          <td>48%</td>
+                          <td class="ytd">37%</td>
+                        </tr>
+                        <tr class="ranking">
+                          <td class="text bold">Category 29</td>
+                          <td>54%</td>
+                          <td class="ytd">32%</td>
+                        </tr>
+                      </tbody>
+                    </table>
 
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Notes</label>
-                        <div class="col-sm-8">
-                          <textarea class="form-control" rows="4"></textarea>
-                        </div>
-                      </div>
+                  </div>
 
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Note Category</label>
-                        <div class="col-sm-8">
-                          <select class="selectpicker show-tick form-control" title=''>
-                            <option data-hidden="true"></option>
-                            <option>Maintenance</option>
-                            <option>New Work</option>
-                            <option>Safety/Enviro</option>
-                            <option>General</option>
-                          </select>
-                        </div>
-                      </div>
+                  <div class="col-md-6">
 
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Date Added</label>
-                        <div class="col-sm-8">
-                          <div class="input-group merged">
-                            <input type="text" class="form-control date datepicker" />
-                            <span class="input-group-addon">
-                              <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
+                    <!-- form panel 2 -->
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+
+                      <div class="form-panel">
+
+                        <form class="form-horizontal container">
+
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label"></label>
+                            <label class="col-sm-8">Burner Events</label>
                           </div>
-                        </div>
-                      </div>
 
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label"></label>
-                        <label class="col-sm-4 control-label"></label>
-                        <div class="col-sm-4">
-                          <span class='btn btn-info attachment'>Add Note</span>
-                        </div>
-                      </div>
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label">Burner Event</label>
+                            <div class="col-sm-8">
+                              <textarea class="form-control" rows="4"></textarea>
+                            </div>
+                          </div>
 
-                      <div class="form-group">
-                        <label class="col-sm-4 control-label">Note History</label>
-                        <div class="col-sm-8"></div>
-                      </div>
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label">Burner Category</label>
+                            <div class="col-sm-8">
+                              <select class="selectpicker show-tick form-control" title=''>
+                                <option data-hidden="true"></option>
+                                <option>Crew Return</option>
+                                <option>Production Waste</option>
+                                <option>Defective/Plant Issue</option>
+                                <option>Over Order/Produce - Unbilled</option>
+                                <option>Dry Waste</option>
+                              </select>
+                            </div>
+                          </div>
 
-                      <div class="form-group">
-                        <div class="col-sm-12">
-                          <!-- each searchable table needs unique ID "table-filter-*" -->
-                          <table class="table table-condensed table-striped contact-history-table">
-                            <thead>
-                              <tr>
-                                <th class="tbl-date">Date</th>
-                                <th class="tbl-request">Category</th>
-                                <th class="tbl-request">Note</th>
-                              </tr>
-                            </thead>
-                            <tr>
-                              <td><div class="text">02/01/2014</div></td>
-                              <td><div class="text">Maintenance</div></td>
-                              <td><div class="text">Tank 1 stirrer belt worn</div></td>
-                            </tr>
-                            <tr>
-                              <td><div class="text">22/01/2014</div></td>
-                              <td><div class="text">Maintenance</div></td>
-                              <td><div class="text">Tank 1 stirrer belt failed</div></td>
-                            </tr>
-                            <tr>
-                              <td><div class="text">23/01/2014</div></td>
-                              <td><div class="text">Maintenance</div></td>
-                              <td><div class="text">Tank 1 stirrer belt replaced</div></td>
-                            </tr>
-                            <tr>
-                              <td><div class="text">02/02/2014</div></td>
-                              <td><div class="text">Other/General</div></td>
-                              <td><div class="text">Tank 1 breather spill needs cleaning</div></td>
-                            </tr>
-                          </table>
-                          <!-- notes history table end-->
-                        </div>
-                      </div>
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label">Date</label>
+                            <div class="col-sm-8">
+                              <div class="input-group merged">
+                                <input type="text" class="form-control date datepicker" />
+                                <span class="input-group-addon">
+                                  <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
 
-                  </form>
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label"></label>
+                            <label class="col-sm-4 control-label"></label>
+                            <div class="col-sm-4">
+                              <span class='btn btn-info attachment'>Add Event</span>
+                            </div>
+                          </div>
+
+                        </form>
+
+                      </div>
+                    </div>
+                    <!-- end form panel 2 -->
+
+                  </div>
 
                 </div>
               </div>
-              <!-- end form panel 2 -->
 
             </div>
             <!--end burner tab-->
@@ -477,9 +645,190 @@
     order: [[ 2, "desc" ]]
   });
 
+  rankings_table_colour();
 </script>
 
 <script type="text/javascript">
+
+// elec by category chart
+  var chartElecByCategory = new CanvasJS.Chart("elecByCategory", {
+      data: [
+        {
+          showInLegend: true,
+          indexLabelFontSize: '14',
+          indexLabelFontColor: 'white',
+          toolTipContent: "{label}: {y}%",
+          type: "stackedArea",
+          color: "rgba(60,84,151,.9)",
+          markerSize: 0,
+          legendMarkerType: 'square',
+          dataPoints: [
+            { y: 65 },
+            { y: 75 },
+            { y: 0 },
+            { y: 75 },
+            { y: 95 },
+            { y: 95 },
+            { y: 100 },
+            { y: 0 },
+            { y: 50 },
+            { y: 60 },
+            { y: 85 },
+            { y: 120 },
+            { y: 90 },
+            { y: 0 },
+            { y: 85 },
+            { y: 90 },
+            { y: 120 },
+            { y: 90 },
+            { y: 0 },
+            { y: 50 }
+          ]
+        },
+        {
+          showInLegend: true,
+          indexLabelFontSize: '14',
+          indexLabelFontColor: 'white',
+          toolTipContent: "target 100%",
+          type: "stackedArea",
+          color: "rgba(22,115,211,.9)",
+          markerSize: 0,
+          legendMarkerType: 'square',
+          dataPoints: [
+            { y: 65 },
+            { y: 40 },
+            { y: 80 },
+            { y: 56 },
+            { y: 65 },
+            { y: 78 },
+            { y: 45 },
+            { y: 54 },
+            { y: 33 },
+            { y: 26 },
+            { y: 89 },
+            { y: 25 },
+            { y: 67 },
+            { y: 78 },
+            { y: 79 },
+            { y: 57 },
+            { y: 90 },
+            { y: 78 },
+            { y: 49 },
+            { y: 50 }
+          ]
+        }
+      ],
+      title:{
+            text: "Electricity By Category",
+            fontSize: "22"
+          },
+    creditText: "",
+    axisX:{
+       labelFontFamily: "Arial",
+       labelFontColor: "black",
+       labelFontSize: 12,
+       labelAngle: 0,
+       interval: 1
+      },
+    axisY:{
+       labelFontFamily: "Arial",
+       labelFontColor: "black",
+       labelFontSize: 10
+      },
+    backgroundColor: "#eae8e8"
+  });
+  chartElecByCategory.render();
+
+
+// burner by category chart
+  var chartBurnerByCategory = new CanvasJS.Chart("burnerByCategory", {
+      data: [
+        {
+          showInLegend: true,
+          indexLabelFontSize: '14',
+          indexLabelFontColor: 'white',
+          toolTipContent: "{label}: {y}%",
+          type: "stackedArea",
+          color: "rgba(60,84,151,.9)",
+          markerSize: 0,
+          legendMarkerType: 'square',
+          dataPoints: [
+            { y: 65 },
+            { y: 75 },
+            { y: 0 },
+            { y: 75 },
+            { y: 95 },
+            { y: 95 },
+            { y: 100 },
+            { y: 0 },
+            { y: 50 },
+            { y: 60 },
+            { y: 85 },
+            { y: 120 },
+            { y: 90 },
+            { y: 0 },
+            { y: 85 },
+            { y: 90 },
+            { y: 120 },
+            { y: 90 },
+            { y: 0 },
+            { y: 50 }
+          ]
+        },
+        {
+          showInLegend: true,
+          indexLabelFontSize: '14',
+          indexLabelFontColor: 'white',
+          toolTipContent: "target 100%",
+          type: "stackedArea",
+          color: "rgba(22,115,211,.9)",
+          markerSize: 0,
+          legendMarkerType: 'square',
+          dataPoints: [
+            { y: 65 },
+            { y: 40 },
+            { y: 80 },
+            { y: 56 },
+            { y: 65 },
+            { y: 78 },
+            { y: 45 },
+            { y: 54 },
+            { y: 33 },
+            { y: 26 },
+            { y: 89 },
+            { y: 25 },
+            { y: 67 },
+            { y: 78 },
+            { y: 79 },
+            { y: 57 },
+            { y: 90 },
+            { y: 78 },
+            { y: 49 },
+            { y: 50 }
+          ]
+        }
+      ],
+      title:{
+            text: "Burner By Category",
+            fontSize: "22"
+          },
+    creditText: "",
+    axisX:{
+       labelFontFamily: "Arial",
+       labelFontColor: "black",
+       labelFontSize: 12,
+       labelAngle: 0,
+       interval: 1
+      },
+    axisY:{
+       labelFontFamily: "Arial",
+       labelFontColor: "black",
+       labelFontSize: 10
+      },
+    backgroundColor: "#eae8e8"
+  });
+  chartBurnerByCategory.render();
+
 
 // waste by category chart
   var chartWasteByCategory = new CanvasJS.Chart("wasteByCategory", {

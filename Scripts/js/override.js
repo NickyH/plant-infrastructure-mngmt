@@ -48,8 +48,8 @@ function insert_markers_mobile() {
   var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
   var image = {
-    url: '../Content/images/mobile-blue.png',
-    size: new google.maps.Size( 50, 30 )
+    url: '../Content/images/mobile-paver.png',
+    size: new google.maps.Size( 30.75, 18.18 )
   };
 
   for (var i = 0; i < mobile.length; i++) {
@@ -286,11 +286,15 @@ function toggle_tab_stats() {
     $('#form-plant-stats-elec').removeClass('hidden');
     $('#form-plant-stats-burn').addClass('hidden');
     $('#form-plant-stats-waste').addClass('hidden');
+    chartElecByCategory.render();
+    rankings_table_colour();
   }
   if (tab_name === 'tab-plant-stats-burn') {
     $('#form-plant-stats-elec').addClass('hidden');
     $('#form-plant-stats-burn').removeClass('hidden');
     $('#form-plant-stats-waste').addClass('hidden');
+    chartBurnerByCategory.render();
+    rankings_table_colour();
   }
   if (tab_name === 'tab-plant-stats-waste') {
     $('#form-plant-stats-elec').addClass('hidden');
